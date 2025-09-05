@@ -31,6 +31,7 @@ import {
   Search,
   Navigation,
   AlertCircle,
+
 } from "lucide-react"
 
 export default function AdrilinkLanding() {
@@ -71,7 +72,7 @@ export default function AdrilinkLanding() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-primary/5 via-yellow-50 to-accent/10 border-b-4 border-primary"
+  className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-primary/5 via-blue-70 to-accent/60 border-b-4 border-primary"
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -80,7 +81,7 @@ export default function AdrilinkLanding() {
               "url('/main.png')",
           }}
         >
-          <div className="absolute inset-0 bg-primary/80"></div>
+          <div className="absolute inset-0 bg-primary/60"></div>
         </div>
 
         <div className="relative container mx-auto px-4 text-center text-white">
@@ -99,7 +100,7 @@ export default function AdrilinkLanding() {
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
               <a href="#services">
-                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8">
+                <Button size="lg" className="bg-accent text-white hover:bg-accent/90 text-lg px-8">
                   Our Services
                 </Button>
               </a>
@@ -109,7 +110,7 @@ export default function AdrilinkLanding() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 bg-transparent"
+                  className="border-accent text-white hover:bg-white hover:text-primary text-lg px-8 bg-transparent"
                 >
                   Get Quote
                 </Button>
@@ -125,19 +126,19 @@ export default function AdrilinkLanding() {
             viewport={{ once: true, amount: 0.3 }}
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-accent">2022</div>
+              <div className="text-3xl font-bold text-white">2022</div>
               <div className="text-sm">Established</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-accent">100%</div>
+              <div className="text-3xl font-bold text-white">100%</div>
               <div className="text-sm">East Africa Coverage</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-accent">24/7</div>
+              <div className="text-3xl font-bold text-white">24/7</div>
               <div className="text-sm">Support</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-accent">Global</div>
+              <div className="text-3xl font-bold text-white">Global</div>
               <div className="text-sm">Network</div>
             </div>
           </motion.div>
@@ -179,7 +180,7 @@ export default function AdrilinkLanding() {
                   <Button
                     onClick={handleTracking}
                     disabled={isTracking || !trackingNumber.trim()}
-                    className="bg-accent text-accent-foreground hover:bg-accent/90"
+                    className="bg-accent text-white hover:bg-accent/90"
                   >
                     {isTracking ? (
                       <div className="w-4 h-4 border-2 border-accent-foreground border-t-transparent rounded-full animate-spin" />
@@ -260,7 +261,7 @@ export default function AdrilinkLanding() {
                         </div>
                         <div className="w-full bg-muted rounded-full h-2">
                           <div
-                            className="bg-accent h-2 rounded-full transition-all duration-1000 ease-out"
+                            className="bg-accent h-2 rounded-full transition-all duration-1000 ease-out text-white"
                             style={{ width: `${trackingResult.progress}%` }}
                           ></div>
                         </div>
@@ -297,7 +298,7 @@ export default function AdrilinkLanding() {
                           return (
                             <div key={index} className="flex items-start space-x-4">
                               <div className="flex-shrink-0">
-                                <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                                <div className="w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center">
                                   <IconComponent className="w-5 h-5 text-accent-foreground" />
                                 </div>
                               </div>
@@ -393,7 +394,7 @@ export default function AdrilinkLanding() {
       </section> */}
 
       {/* About Section */}
-  <section id="about" className="py-20 bg-gradient-to-br from-yellow-50 via-muted/30 to-primary/10 border-b-4 border-yellow-300">
+  <section id="about" className="py-20 bg-gradient-to-br from-blue-50 via-muted/30 to-primary/10 border-b-4 border-blue-300">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-primary">About Adrilink Limited</h2>
@@ -455,10 +456,10 @@ export default function AdrilinkLanding() {
             <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-primary/5 via-background to-primary/5 border-2 border-primary/20">
               <CardHeader className="text-center pb-4">
                 <div className="relative">
-                  <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 transform transition-transform duration-500 group-hover:rotate-12">
+                  <div className="w-20 h-20 bg-primary/10 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 transform transition-transform duration-500 group-hover:rotate-12">
                     <Star className="w-10 h-10 text-primary" />
                   </div>
-                  <div className="absolute -inset-2 bg-primary/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="absolute -inset-2 bg-primary/5 text-white rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
                 <CardTitle className="text-2xl text-primary">Our Mission</CardTitle>
               </CardHeader>
@@ -479,10 +480,10 @@ export default function AdrilinkLanding() {
             <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-accent/5 via-background to-accent/5 border-2 border-accent/20">
               <CardHeader className="text-center pb-4">
                 <div className="relative">
-                  <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6 transform transition-transform duration-500 group-hover:rotate-12">
+                  <div className="w-20 h-20 bg-accent/10 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 transform transition-transform duration-500 group-hover:rotate-12">
                     <Globe className="w-10 h-10 text-accent" />
                   </div>
-                  <div className="absolute -inset-2 bg-accent/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="absolute -inset-2 bg-accent/5 text-white rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
                 <CardTitle className="text-2xl text-primary">Our Vision</CardTitle>
               </CardHeader>
@@ -525,15 +526,15 @@ export default function AdrilinkLanding() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
                 <div className="absolute bottom-0 left-0 p-8">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center">
-                      <Plane className="w-6 h-6 text-yellow-900" />
+                    <div className="w-12 h-12 bg-blue-400 text-white rounded-lg flex items-center justify-center">
+                      <Plane className="w-6 h-6 text-blue-900" />
                     </div>
                     <h3 className="text-2xl font-bold text-white">Air Freight</h3>
                   </div>
                   <p className="text-white/90 mb-4 max-w-md">
                     International air cargo solutions offering the fastest and most cost-effective transport through our global network.
                   </p>
-                  <Button variant="outline" className="bg-yellow-400 border-yellow-400 text-yellow-900 hover:bg-yellow-500 hover:text-white" onClick={() => setServicePopup("air")}>Read More</Button>
+                  <Button variant="outline" className="bg-blue-400 border-blue-400 text-white hover:bg-blue-500 hover:text-white" onClick={() => setServicePopup("air")}>Read More</Button>
                 </div>
               </div>
             </div>
@@ -548,15 +549,15 @@ export default function AdrilinkLanding() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
                 <div className="absolute bottom-0 left-0 p-8">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 bg-yellow-300 rounded-lg flex items-center justify-center">
-                      <Ship className="w-6 h-6 text-yellow-900" />
+                    <div className="w-12 h-12 bg-blue-300 text-white rounded-lg flex items-center justify-center">
+                      <Ship className="w-6 h-6 text-blue-900" />
                     </div>
                     <h3 className="text-2xl font-bold text-white">Sea Freight</h3>
                   </div>
                   <p className="text-white/90 mb-4 max-w-md">
                     FCL and LCL services with comprehensive tracking and daily updates for complete shipment visibility.
                   </p>
-                  <Button variant="outline" className="bg-yellow-300 border-yellow-300 text-yellow-900 hover:bg-yellow-400 hover:text-white" onClick={() => setServicePopup("sea")}>Read More</Button>
+                  <Button variant="outline" className="bg-blue-300 border-blue-300 text-white hover:bg-blue-400 hover:text-white" onClick={() => setServicePopup("sea")}>Read More</Button>
                 </div>
               </div>
             </div>
@@ -573,15 +574,15 @@ export default function AdrilinkLanding() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-yellow-200 rounded-lg flex items-center justify-center">
-                      <Package className="w-5 h-5 text-yellow-900" />
+                    <div className="w-10 h-10 bg-blue-200 text-white rounded-lg flex items-center justify-center">
+                      <Package className="w-5 h-5 text-blue-900" />
                     </div>
                     <h3 className="text-xl font-bold text-white">Consolidation</h3>
                   </div>
                   <p className="text-white/90 text-sm mb-4">
                     Cost-effective groupage services for multiple origins and destinations.
                   </p>
-                  <Button variant="outline" className="bg-yellow-200 border-yellow-200 text-yellow-900 hover:bg-yellow-300 hover:text-white" onClick={() => setServicePopup("consolidation")}>Read More</Button>
+                  <Button variant="outline" className="bg-blue-200 border-blue-200 text-white hover:bg-blue-300 hover:text-white" onClick={() => setServicePopup("consolidation")}>Read More</Button>
                 </div>
               </div>
             </div>
@@ -596,15 +597,15 @@ export default function AdrilinkLanding() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
-                      <FileCheck className="w-5 h-5 text-yellow-900" />
+                    <div className="w-10 h-10 bg-blue-100 text-white rounded-lg flex items-center justify-center">
+                      <FileCheck className="w-5 h-5 text-blue-900" />
                     </div>
                     <h3 className="text-xl font-bold text-white">Customs Clearance</h3>
                   </div>
                   <p className="text-white/90 text-sm mb-4">
                     Expert customs brokerage with Africa-wide coverage and compliance.
                   </p>
-                  <Button variant="outline" className="bg-yellow-100 border-yellow-100 text-yellow-900 hover:bg-yellow-200 hover:text-white" onClick={() => setServicePopup("customs")}>Read More</Button>
+                  <Button variant="outline" className="bg-blue-100 border-blue-100 text-blue-900 hover:bg-blue-200 hover:text-white" onClick={() => setServicePopup("customs")}>Read More</Button>
                 </div>
               </div>
             </div>
@@ -619,15 +620,15 @@ export default function AdrilinkLanding() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-yellow-50 rounded-lg flex items-center justify-center">
-                      <Warehouse className="w-5 h-5 text-yellow-900" />
+                    <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
+                      <Warehouse className="w-5 h-5 text-blue-900" />
                     </div>
                     <h3 className="text-xl font-bold text-white">Warehousing</h3>
                   </div>
                   <p className="text-white/90 text-sm mb-4">
                     Strategic storage and distribution solutions with inventory control.
                   </p>
-                  <Button variant="outline" className="bg-yellow-50 border-yellow-50 text-yellow-900 hover:bg-yellow-100 hover:text-white" onClick={() => setServicePopup("warehousing")}>Read More</Button>
+                  <Button variant="outline" className="bg-blue-50 border-blue-50 text-blue-900 hover:bg-blue-100 hover:text-white" onClick={() => setServicePopup("warehousing")}>Read More</Button>
                 </div>
               </div>
             </div>
@@ -642,15 +643,15 @@ export default function AdrilinkLanding() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center">
-                      <Truck className="w-5 h-5 text-yellow-900" />
+                    <div className="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center">
+                      <Truck className="w-5 h-5 text-blue-900" />
                     </div>
                     <h3 className="text-xl font-bold text-white">Door to Door</h3>
                   </div>
                   <p className="text-white/90 text-sm mb-4">
                     Complete supply chain control with comprehensive coverage.
                   </p>
-                  <Button variant="outline" className="bg-yellow-400 border-yellow-400 text-yellow-900 hover:bg-yellow-500 hover:text-white" onClick={() => setServicePopup("door")}>Read More</Button>
+                  <Button variant="outline" className="bg-blue-400 border-blue-400 text-blue-900 hover:bg-blue-500 hover:text-white" onClick={() => setServicePopup("door")}>Read More</Button>
                 </div>
               </div>
             </div>
@@ -667,15 +668,15 @@ export default function AdrilinkLanding() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-yellow-200 rounded-lg flex items-center justify-center">
-                      <Home className="w-5 h-5 text-yellow-900" />
+                    <div className="w-10 h-10 bg-blue-200 rounded-lg flex items-center justify-center">
+                      <Home className="w-5 h-5 text-blue-900" />
                     </div>
                     <h3 className="text-xl font-bold text-white">Packing Services</h3>
                   </div>
                   <p className="text-white/90 text-sm mb-4">
                     Professional packing for local and international moves.
                   </p>
-                  <Button variant="outline" className="bg-yellow-200 border-yellow-200 text-yellow-900 hover:bg-yellow-300 hover:text-white" onClick={() => setServicePopup("packing")}>Read More</Button>
+                  <Button variant="outline" className="bg-blue-200 border-blue-200 text-blue-900 hover:bg-blue-300 hover:text-white" onClick={() => setServicePopup("packing")}>Read More</Button>
                 </div>
               </div>
             </div>
@@ -684,30 +685,30 @@ export default function AdrilinkLanding() {
       {servicePopup === "air" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-yellow-400 via-yellow-200 to-yellow-100 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-400 via-blue-200 to-blue-100 rounded-xl shadow-2xl p-8 relative"
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-yellow-900 hover:text-yellow-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-yellow-900 mb-4">Airfreight Import and Export</h3>
-            <p className="mb-2 text-yellow-900 font-semibold">Main Description</p>
-            <p className="mb-4 text-yellow-900">In conjunction with our worldwide network of Partners, Associates and Branch offices, we can arrange Air import and export from any country to any destination.</p>
-            <p className="mb-2 text-yellow-900 font-semibold">Service Details</p>
-            <p className="mb-4 text-yellow-900">We offer a comprehensive range of international air cargo solutions ensuring your air cargo travels the safest, fastest and most cost-effective way possible.</p>
-            <p className="mb-2 text-yellow-900 font-semibold">Expertise</p>
-            <p className="mb-4 text-yellow-900">Our experience in the provision of airfreight, air charters, and aviation support and management services covers the complete range of fixed wing operations. In addition to traditional airfreight services, We provide freight handling services and liaison services with local civil aviation.</p>
+            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">Airfreight Import and Export</h3>
+            <p className="mb-2 text-blue-900 font-semibold">Main Description</p>
+            <p className="mb-4 text-blue-900">In conjunction with our worldwide network of Partners, Associates and Branch offices, we can arrange Air import and export from any country to any destination.</p>
+            <p className="mb-2 text-blue-900 font-semibold">Service Details</p>
+            <p className="mb-4 text-blue-900">We offer a comprehensive range of international air cargo solutions ensuring your air cargo travels the safest, fastest and most cost-effective way possible.</p>
+            <p className="mb-2 text-blue-900 font-semibold">Expertise</p>
+            <p className="mb-4 text-blue-900">Our experience in the provision of airfreight, air charters, and aviation support and management services covers the complete range of fixed wing operations. In addition to traditional airfreight services, We provide freight handling services and liaison services with local civil aviation.</p>
           </div>
         </div>
       )}
       {servicePopup === "sea" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-yellow-300 via-yellow-100 to-yellow-50 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-300 via-blue-100 to-blue-50 rounded-xl shadow-2xl p-8 relative"
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-yellow-900 hover:text-yellow-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-yellow-900 mb-4">Sea freight Import & Export</h3>
-            <p className="mb-2 text-yellow-900 font-semibold">Service Overview</p>
-            <ul className="mb-4 text-yellow-900 list-disc pl-5">
+            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">Sea freight Import & Export</h3>
+            <p className="mb-2 text-blue-900 font-semibold">Service Overview</p>
+            <ul className="mb-4 text-blue-900 list-disc pl-5">
               <li>FCL and LCL import and export</li>
               <li>Issuance and verification of shipping documentation</li>
               <li>Export and import customs clearance</li>
@@ -721,31 +722,31 @@ export default function AdrilinkLanding() {
               <li>Sea/Air transportation</li>
               <li>Sea/Road and Sea/Rail Intermodal</li>
             </ul>
-            <p className="mb-2 text-yellow-900 font-semibold">Comprehensive Services</p>
-            <p className="mb-4 text-yellow-900">We offer comprehensive sea freight services via a worldwide network for FCL & LCL shipments, break bulk, project logistics and oversized.</p>
-            <p className="mb-2 text-yellow-900 font-semibold">Equipment & Capabilities</p>
-            <p className="mb-4 text-yellow-900">Whether it is in containers, special equipment or hazardous cargo, we are equipped with the tools, knowledge and a shipping line network able to handle all type of load.</p>
-            <p className="mb-2 text-yellow-900 font-semibold">Tracking & Delivery</p>
-            <p className="mb-4 text-yellow-900">An integrated tracking service will provide you with Custom-tailored daily email reports. From Port handling services to customs clearance, storage and forwarding, we will ensure your cargo is delivered and handled in a safe and timely manner.</p>
-            <p className="mb-2 text-yellow-900 font-semibold">Service Options</p>
-            <p className="mb-4 text-yellow-900">The choice of service includes conference, non-conference lines and charter vessels.</p>
+            <p className="mb-2 text-blue-900 font-semibold">Comprehensive Services</p>
+            <p className="mb-4 text-blue-900">We offer comprehensive sea freight services via a worldwide network for FCL & LCL shipments, break bulk, project logistics and oversized.</p>
+            <p className="mb-2 text-blue-900 font-semibold">Equipment & Capabilities</p>
+            <p className="mb-4 text-blue-900">Whether it is in containers, special equipment or hazardous cargo, we are equipped with the tools, knowledge and a shipping line network able to handle all type of load.</p>
+            <p className="mb-2 text-blue-900 font-semibold">Tracking & Delivery</p>
+            <p className="mb-4 text-blue-900">An integrated tracking service will provide you with Custom-tailored daily email reports. From Port handling services to customs clearance, storage and forwarding, we will ensure your cargo is delivered and handled in a safe and timely manner.</p>
+            <p className="mb-2 text-blue-900 font-semibold">Service Options</p>
+            <p className="mb-4 text-blue-900">The choice of service includes conference, non-conference lines and charter vessels.</p>
           </div>
         </div>
       )}
       {servicePopup === "packing" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-yellow-200 via-yellow-100 to-yellow-50 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-200 via-blue-100 to-blue-50 rounded-xl shadow-2xl p-8 relative"
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-yellow-900 hover:text-yellow-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-yellow-900 mb-4">Packing & Removals</h3>
-            <p className="mb-2 text-yellow-900 font-semibold">Team Expertise</p>
-            <p className="mb-4 text-yellow-900">Adrilink Ltd has qualified team dealing specifically in both local and international packing and removals. We offer a door-to-door solution for both import and export personal effects via our worldwide network.</p>
-            <p className="mb-2 text-yellow-900 font-semibold">Special Care</p>
-            <p className="mb-4 text-yellow-900">Personal effects are normally very fragile and need attention to detail and careful handling.</p>
-            <p className="mb-2 text-yellow-900 font-semibold">Our Procedures</p>
-            <ul className="mb-4 text-yellow-900 list-disc pl-5">
+            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">Packing & Removals</h3>
+            <p className="mb-2 text-blue-900 font-semibold">Team Expertise</p>
+            <p className="mb-4 text-blue-900">Adrilink Ltd has qualified team dealing specifically in both local and international packing and removals. We offer a door-to-door solution for both import and export personal effects via our worldwide network.</p>
+            <p className="mb-2 text-blue-900 font-semibold">Special Care</p>
+            <p className="mb-4 text-blue-900">Personal effects are normally very fragile and need attention to detail and careful handling.</p>
+            <p className="mb-2 text-blue-900 font-semibold">Our Procedures</p>
+            <ul className="mb-4 text-blue-900 list-disc pl-5">
               <li>A survey of the personal effects</li>
               <li>Professional packing</li>
               <li>Collection of shipment and storage in a closed warehouse awaiting freight</li>
@@ -761,67 +762,67 @@ export default function AdrilinkLanding() {
       {servicePopup === "consolidation" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-yellow-100 via-yellow-200 to-yellow-50 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-100 via-blue-200 to-blue-50 rounded-xl shadow-2xl p-8 relative"
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-yellow-900 hover:text-yellow-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-yellow-900 mb-4">Airfreight & Sea freight Consolidation</h3>
-            <p className="mb-2 text-yellow-900 font-semibold">Service Description</p>
-            <p className="mb-4 text-yellow-900">We also offer consolidation or groupage services from most origins and selected destinations for both airfreight and sea freight.</p>
+            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">Airfreight & Sea freight Consolidation</h3>
+            <p className="mb-2 text-blue-900 font-semibold">Service Description</p>
+            <p className="mb-4 text-blue-900">We also offer consolidation or groupage services from most origins and selected destinations for both airfreight and sea freight.</p>
           </div>
         </div>
       )}
       {servicePopup === "warehousing" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-200 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 rounded-xl shadow-2xl p-8 relative"
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-yellow-900 hover:text-yellow-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-yellow-900 mb-4">Logistics & Warehousing</h3>
-            <p className="mb-2 text-yellow-900 font-semibold">Service Listing</p>
-            <p className="mb-4 text-yellow-900">This service is mentioned in the services list but detailed content is not provided in the PDF source document.</p>
+            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">Logistics & Warehousing</h3>
+            <p className="mb-2 text-blue-900 font-semibold">Service Listing</p>
+            <p className="mb-4 text-blue-900">This service is mentioned in the services list but detailed content is not provided in the PDF source document.</p>
           </div>
         </div>
       )}
       {servicePopup === "customs" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-yellow-100 via-yellow-50 to-yellow-200 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200 rounded-xl shadow-2xl p-8 relative"
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-yellow-900 hover:text-yellow-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-yellow-900 mb-4">Customs Clearance Services</h3>
-            <p className="mb-2 text-yellow-900 font-semibold">Quality Service</p>
-            <p className="mb-4 text-yellow-900">We continue to provide quality customs broker and clearance services to our clients all over Africa. Strict compliance to proper customs clearance and procedures are vital.</p>
+            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">Customs Clearance Services</h3>
+            <p className="mb-2 text-blue-900 font-semibold">Quality Service</p>
+            <p className="mb-4 text-blue-900">We continue to provide quality customs broker and clearance services to our clients all over Africa. Strict compliance to proper customs clearance and procedures are vital.</p>
           </div>
         </div>
       )}
       {servicePopup === "door" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-yellow-400 via-yellow-200 to-yellow-100 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-400 via-blue-200 to-blue-100 rounded-xl shadow-2xl p-8 relative"
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-yellow-900 hover:text-yellow-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-yellow-900 mb-4">Door to Door</h3>
-            <p className="mb-2 text-yellow-900 font-semibold">Competitive Advantage</p>
-            <p className="mb-4 text-yellow-900">We deliver competitive advantage to each of our client's supply chains by offering a wide range of global integrated logistics to a customer base that stretches to the most remote locations of East & Central Africa.</p>
-            <p className="mb-2 text-yellow-900 font-semibold">Efficient Integration</p>
-            <p className="mb-4 text-yellow-900">Our efficient integration of logistics services means that we control the entire supply chain and cut out unnecessary mark-ups and intermediaries. Our clients get exceptional value in a simplified price-per-ton delivered-to-the-door format.</p>
+            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">Door to Door</h3>
+            <p className="mb-2 text-blue-900 font-semibold">Competitive Advantage</p>
+            <p className="mb-4 text-blue-900">We deliver competitive advantage to each of our client's supply chains by offering a wide range of global integrated logistics to a customer base that stretches to the most remote locations of East & Central Africa.</p>
+            <p className="mb-2 text-blue-900 font-semibold">Efficient Integration</p>
+            <p className="mb-4 text-blue-900">Our efficient integration of logistics services means that we control the entire supply chain and cut out unnecessary mark-ups and intermediaries. Our clients get exceptional value in a simplified price-per-ton delivered-to-the-door format.</p>
           </div>
         </div>
       )}
       {servicePopup === "container" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-yellow-300 via-yellow-100 to-yellow-50 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-300 via-blue-100 to-blue-50 rounded-xl shadow-2xl p-8 relative"
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-yellow-900 hover:text-yellow-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-yellow-900 mb-4">Container Services</h3>
-            <p className="mb-2 text-yellow-900 font-semibold">Specialized Equipment</p>
-            <p className="mb-4 text-yellow-900">Whether you are shipping vaccines or perishable items, our containers are equipped to provide advanced transport you can rely on.</p>
+            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">Container Services</h3>
+            <p className="mb-2 text-blue-900 font-semibold">Specialized Equipment</p>
+            <p className="mb-4 text-blue-900">Whether you are shipping vaccines or perishable items, our containers are equipped to provide advanced transport you can rely on.</p>
           </div>
         </div>
       )}
@@ -1605,7 +1606,7 @@ export default function AdrilinkLanding() {
         </div>
       </section> */}
 
-  <section id="faq" className="py-20 bg-gradient-to-br from-yellow-50 via-primary/10 to-accent/10 border-b-4 border-yellow-300">
+  <section id="faq" className="py-20 bg-gradient-to-br from-blue-50 via-primary/10 to-accent/10 border-b-4 border-blue-300">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-primary">Frequently Asked Questions</h2>
@@ -1842,7 +1843,7 @@ export default function AdrilinkLanding() {
                   Contact Us Now
                 </Button>
               </a>
-              <a href="tel:+254712345678">
+              <a href="tel:+254715328244">
                 <Button
                   size="lg"
                   variant="outline"
@@ -1852,7 +1853,7 @@ export default function AdrilinkLanding() {
                   Schedule a Call
                 </Button>
               </a>
-              <a href="https://wa.me/254712345678" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/254715328244" target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
                   variant="outline"
@@ -1908,8 +1909,8 @@ export default function AdrilinkLanding() {
                     </div>
                   </div>
                   <h3 className="font-semibold text-lg text-primary mb-2">Call Us</h3>
-                  <a href="tel:+254712345678" className="text-muted-foreground hover:text-primary transition-colors">
-                    +254 712 345 678
+                  <a href="tel:+254715328244" className="text-muted-foreground hover:text-primary transition-colors">
+                    +254 715 328 244
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">
                     Mon-Sat: 8am - 6pm
@@ -1959,11 +1960,11 @@ export default function AdrilinkLanding() {
             {/* Company Info */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2 mb-6">
-                <div className="w-12 h-12 overflow-hidden">
+                <div className="w-32 h-12 overflow-hidden">
                   <img 
-                    src="/adrilink-logo.png"
-                    alt="Adrilink Logo"
-                    className="w-full h-full object-contain"
+                       src="/adrilink-logo.jpeg" alt="Adrilink Logo" 
+                    
+                    className="w-32 h-12"
                   />
                 </div>
                 <div>
@@ -2058,8 +2059,8 @@ export default function AdrilinkLanding() {
                 </li>
                 <li className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-accent" />
-                  <a href="tel:+254712345678" className="text-sm text-white/80 hover:text-white transition-colors">
-                    +254 712 345 678
+                  <a href="tel:+254715328244" className="text-sm text-white/80 hover:text-white transition-colors">
+                    +254 715 328 244
                   </a>
                 </li>
                 <li>
