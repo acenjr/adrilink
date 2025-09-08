@@ -33,10 +33,10 @@ function Header() {
     <>
       {/* Only show header if not mobile menu open on mobile */}
       {!(isMobile && open) && (
-        <header className={`sticky top-0 z-40 w-full bg-gradient-to-r from-primary/80 via-accent/80 to-blue-100/80 backdrop-blur border-b border-accent shadow-sm transition-transform duration-300 ${hideHeader ? "-translate-y-full" : "translate-y-0"} md:translate-y-0`}>
-          <div className="container mx-auto px-4 flex items-center justify-between h-16">
+        <header className={`sticky top-0 z-60 w-full bg-gradient-to-r from-primary/80 via-accent/80 to-blue-100/80 backdrop-blur border-b border-accent shadow-sm transition-transform duration-300 ${hideHeader ? "-translate-y-full" : "translate-y-0"} md:translate-y-0`}>
+          <div className="container mx-auto px-6 flex items-center justify-between h-26">
             <Link href="/" className="flex items-center gap-2">
-              <img src="/adrilink-logo.jpeg" alt="Adrilink Logo" className="h-12 w-32" />
+              <img src="/adrilink-logo.jpeg" alt="Adrilink Logo" className="h-22 w-42" />
               {/* <span className="font-bold text-lg text-primary">Adrilink</span> */}
             </Link>
             <nav className="hidden md:flex gap-8">
@@ -62,7 +62,7 @@ function Header() {
             {/* Logo and close button */}
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2">
-                    <img src="/adrilink-logo.jpeg" alt="Adrilink Logo" className="h-12 w-32" />
+                    <img src="/adrilink-logo.jpeg" alt="Adrilink Logo" className="h-22 w-42" />
                 {/* <span className="font-bold text-lg text-primary">Adrilink</span> */}
               </div>
               <button className="p-2 rounded-full bg-accent/20 hover:bg-accent/40 text-accent" onClick={() => setOpen(false)}>

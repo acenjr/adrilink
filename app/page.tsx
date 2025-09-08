@@ -85,7 +85,8 @@ export default function AdrilinkLanding() {
         </div>
 
         <div className="relative container mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance">Your Global Logistics Partner</h1>
+          <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance">ADRILINK LIMITED</h1>
+          <h2 className="text-4xl lg:text-4xl font-bold mb-6 text-balance">Your Global Logistics Partner</h2>
           <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-pretty">
             We provide total logistics services: international freight forwarding, custom clearance and transportation
             to wherever you are in East African regions
