@@ -15,24 +15,24 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/adrilink-logo.jpeg',
+        url: '/adrilink-logo.png',
         sizes: '32x32',
         type: 'image/png',
       },
       {
-        url: '/adrilink-logo.jpeg',
+        url: '/adrilink-logo.png',
         sizes: '16x16',
         type: 'image/png',
       }
     ],
     apple: [
       {
-        url: '/adrilink-logo.jpeg',
+        url: '/adrilink-logo.png',
         sizes: '180x180',
-        type: 'image/jpeg',
+        type: 'image/png',
       }
     ],
-    shortcut: ['/adrilink-logo.jpeg'],
+    shortcut: ['/adrilink-logo.png'],
   },
   openGraph: {
     type: 'website',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: 'Adrilink Limited',
     images: [
       {
-        url: '/adrilink-logo.jpeg',
+        url: '/adrilink-logo.png',
         width: 800,
         height: 600,
         alt: 'Adrilink Limited Logo',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Adrilink Limited - Your Global Logistics Partner',
     description: 'Leading logistics provider in East Africa offering comprehensive freight forwarding and customs clearance services.',
-    images: ['/adrilink-logo.jpeg'],
+    images: ['/adrilink-logo.png'],
   },
   manifest: '/site.webmanifest',
 }

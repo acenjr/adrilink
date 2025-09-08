@@ -3,6 +3,8 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
+import Autoplay from '@/components/ui/carousel-autoplay'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -72,16 +74,28 @@ export default function AdrilinkLanding() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-  className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-primary/5 via-blue-70 to-accent/60 border-b-4 border-primary"
+  className="relative py-20 lg:py-32 overflow-hidden border-b-4 border-primary"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              "url('/main.png')",
-          }}
-        >
-          <div className="absolute inset-0 bg-primary/60"></div>
+
+        {/* Hero Image Carousel */}
+        <div className="absolute inset-0">
+          <Carousel className="h-full w-full" opts={{ loop: true }} plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}>
+            <CarouselContent className="h-full">
+              {["/main.png", "/cargo.jpg", "/customs.jpg"].map((src, idx) => (
+                <CarouselItem key={src} className="h-full">
+                  <div className="relative h-full w-full">
+                    <img
+                      src={src}
+                      alt={`Hero Slide ${idx + 1}`}
+                      className="object-cover w-full h-full min-h-[320px] max-h-[1200px]"
+                      style={{ minHeight: '320px', maxHeight: '1200px' }}
+                    />
+                    <div className="absolute inset-0 bg-primary/60"></div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
 
         <div className="relative container mx-auto px-4 text-center text-white">
@@ -902,711 +916,16 @@ export default function AdrilinkLanding() {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8">
-              Get Your Quote Today
-            </Button>
+            <a href="#contact">
+              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8">
+                Get Your Quote Today
+              </Button>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Client Testimonials & Case Studies */}
-  <section id="testimonials" className="py-20 bg-gradient-to-br from-accent/10 via-muted/20 to-primary/5 border-b-4 border-accent">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-primary">What Our Clients Say</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Trusted by businesses across East Africa for reliable, efficient logistics solutions that drive growth.
-            </p>
-          </div>
-
-          {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-4 text-pretty">
-                  "Adrilink transformed our supply chain efficiency. Their customs clearance expertise saved us weeks of
-                  delays and thousands in costs."
-                </p>
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                    <span className="text-accent-foreground font-semibold text-sm">MK</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-primary">Michael Kariuki</p>
-                    <p className="text-sm text-muted-foreground">Supply Chain Director, East Africa Beverages</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-4 text-pretty">
-                  "Outstanding air freight service! Our pharmaceutical shipments arrive on time and in perfect condition
-                  every single time."
-                </p>
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                    <span className="text-accent-foreground font-semibold text-sm">AN</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-primary">Amina Njoroge</p>
-                    <p className="text-sm text-muted-foreground">Operations Manager, MedSupply Kenya</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-4 text-pretty">
-                  "Their door-to-door service reached our remote locations in Uganda seamlessly. Exceptional
-                  coordination and communication."
-                </p>
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                    <span className="text-accent-foreground font-semibold text-sm">JM</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-primary">James Mwangi</p>
-                    <p className="text-sm text-muted-foreground">Logistics Head, Agricultural Solutions Ltd</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Case Studies */}
-          <div className="space-y-8">
-            <div className="text-center mb-12">
-              <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-primary">Success Stories</h3>
-              <p className="text-muted-foreground max-w-xl mx-auto text-pretty">
-                Real results from our logistics partnerships across diverse industries
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-8">
-              <Card className="border-2 border-accent/20">
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-2">
-                    <CardTitle className="text-primary">Manufacturing Excellence</CardTitle>
-                    <div className="text-2xl font-bold text-accent">40%</div>
-                  </div>
-                  <CardDescription>Cost Reduction Achieved</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4 text-pretty">
-                    A leading automotive parts manufacturer reduced logistics costs by 40% and improved delivery times
-                    by 3 days through our integrated sea freight and customs clearance solutions.
-                  </p>
-                  <div className="flex items-center space-x-4 text-sm">
-                    <div className="flex items-center space-x-1">
-                      <CheckCircle className="w-4 h-4 text-accent" />
-                      <span className="text-muted-foreground">15 containers/month</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Clock className="w-4 h-4 text-accent" />
-                      <span className="text-muted-foreground">3 days faster</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-primary/20">
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-2">
-                    <CardTitle className="text-primary">Pharmaceutical Precision</CardTitle>
-                    <div className="text-2xl font-bold text-accent">99.8%</div>
-                  </div>
-                  <CardDescription>On-Time Delivery Rate</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4 text-pretty">
-                    Critical temperature-controlled pharmaceutical shipments maintained perfect cold chain integrity
-                    with 99.8% on-time delivery across 5 East African countries.
-                  </p>
-                  <div className="flex items-center space-x-4 text-sm">
-                    <div className="flex items-center space-x-1">
-                      <Thermometer className="w-4 h-4 text-accent" />
-                      <span className="text-muted-foreground">Cold chain maintained</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Globe className="w-4 h-4 text-accent" />
-                      <span className="text-muted-foreground">5 countries</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Industry Certifications & Trust Indicators */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-primary">
-              Certified Excellence & Trusted Partnerships
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Our industry certifications and strategic partnerships ensure compliance, security, and reliability in
-              every shipment.
-            </p>
-          </div>
-
-          {/* Certifications Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 hover:border-accent/40 transition-all duration-300">
-              <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="p-8 relative z-10">
-                <div className="mb-6 relative">
-                  <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto transform transition-transform duration-500 group-hover:rotate-12">
-                    <Shield className="w-10 h-10 text-accent" />
-                  </div>
-                  <div className="absolute -inset-2 bg-accent/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                </div>
-                <h3 className="font-bold text-lg text-primary mb-3">ISO 9001:2015</h3>
-                <p className="text-sm text-muted-foreground">Quality Management System Certified</p>
-                <div className="mt-4 pt-4 border-t border-accent/10">
-                  <p className="text-xs text-muted-foreground">Certified by Bureau Veritas</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 hover:border-primary/40 transition-all duration-300">
-              <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="p-8 relative z-10">
-                <div className="mb-6 relative">
-                  <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto transform transition-transform duration-500 group-hover:rotate-12">
-                    <FileCheck className="w-10 h-10 text-primary" />
-                  </div>
-                  <div className="absolute -inset-2 bg-primary/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                </div>
-                <h3 className="font-bold text-lg text-primary mb-3">IATA Certified</h3>
-                <p className="text-sm text-muted-foreground">International Air Transport Association</p>
-                <div className="mt-4 pt-4 border-t border-primary/10">
-                  <p className="text-xs text-muted-foreground">Member since 2022</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 hover:border-accent/40 transition-all duration-300">
-              <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="p-8 relative z-10">
-                <div className="mb-6 relative">
-                  <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto transform transition-transform duration-500 group-hover:rotate-12">
-                    <Globe className="w-10 h-10 text-accent" />
-                  </div>
-                  <div className="absolute -inset-2 bg-accent/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                </div>
-                <h3 className="font-bold text-lg text-primary mb-3">FIATA Member</h3>
-                <p className="text-sm text-muted-foreground">International Federation of Freight Forwarders</p>
-                <div className="mt-4 pt-4 border-t border-accent/10">
-                  <p className="text-xs text-muted-foreground">Global Network Access</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 hover:border-primary/40 transition-all duration-300">
-              <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="p-8 relative z-10">
-                <div className="mb-6 relative">
-                  <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto transform transition-transform duration-500 group-hover:rotate-12">
-                    <CheckCircle className="w-10 h-10 text-primary" />
-                  </div>
-                  <div className="absolute -inset-2 bg-primary/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                </div>
-                <h3 className="font-bold text-lg text-primary mb-3">AEO Certified</h3>
-                <p className="text-sm text-muted-foreground">Authorized Economic Operator Status</p>
-                <div className="mt-4 pt-4 border-t border-primary/10">
-                  <p className="text-xs text-muted-foreground">KRA Accredited</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Security & Compliance */}
-          <div className="bg-muted/30 rounded-lg p-8 mb-16">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-primary mb-4">Security & Compliance</h3>
-              <p className="text-muted-foreground max-w-xl mx-auto text-pretty">
-                Your cargo security and regulatory compliance are our top priorities
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Shield className="w-6 h-6 text-accent-foreground" />
-                </div>
-                <h4 className="font-semibold text-primary mb-2">C-TPAT Compliant</h4>
-                <p className="text-sm text-muted-foreground">
-                  Customs-Trade Partnership Against Terrorism certified security protocols
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <FileCheck className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <h4 className="font-semibold text-primary mb-2">GDPR Compliant</h4>
-                <p className="text-sm text-muted-foreground">
-                  Full data protection and privacy compliance for all client information
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Thermometer className="w-6 h-6 text-accent-foreground" />
-                </div>
-                <h4 className="font-semibold text-primary mb-2">GDP Certified</h4>
-                <p className="text-sm text-muted-foreground">
-                  Good Distribution Practice for pharmaceutical and healthcare logistics
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Strategic Partnerships */}
-          <div className="space-y-12">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-primary mb-4">Strategic Partnerships</h3>
-              <p className="text-muted-foreground max-w-xl mx-auto text-pretty">
-                Global network of trusted partners ensuring seamless worldwide logistics
-              </p>
-            </div>
-
-            {/* Shipping Lines & Airlines */}
-            {/* <div className="grid md:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-primary flex items-center">
-                    <Ship className="w-5 h-5 mr-2 text-accent" />
-                    Major Shipping Lines
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-muted-foreground">Maersk Line</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-muted-foreground">MSC</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-muted-foreground">CMA CGM</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-muted-foreground">COSCO Shipping</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-muted-foreground">Hapag-Lloyd</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-muted-foreground">Evergreen Line</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-primary flex items-center">
-                    <Plane className="w-5 h-5 mr-2 text-accent" />
-                    Airline Partners
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-muted-foreground">Kenya Airways</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-muted-foreground">Emirates SkyCargo</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-muted-foreground">Turkish Cargo</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-muted-foreground">Qatar Airways Cargo</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-muted-foreground">Ethiopian Cargo</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-muted-foreground">Lufthansa Cargo</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div> */}
-
-            {/* Government & Regulatory Bodies */}
-            <Card className="bg-primary/5 border-2 border-primary/20">
-              <CardHeader>
-                <CardTitle className="text-primary text-center">Government & Regulatory Partnerships</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-3 gap-6 text-center">
-                  <div>
-                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
-                      <FileCheck className="w-6 h-6 text-primary-foreground" />
-                    </div>
-                    <h4 className="font-semibold text-primary mb-2">Kenya Revenue Authority</h4>
-                    <p className="text-sm text-muted-foreground">Authorized customs clearance agent</p>
-                  </div>
-
-                  <div>
-                    <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mx-auto mb-3">
-                      <Globe className="w-6 h-6 text-accent-foreground" />
-                    </div>
-                    <h4 className="font-semibold text-primary mb-2">Port Authorities</h4>
-                    <p className="text-sm text-muted-foreground">Direct partnerships across East African ports</p>
-                  </div>
-
-                  <div>
-                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
-                      <Plane className="w-6 h-6 text-primary-foreground" />
-                    </div>
-                    <h4 className="font-semibold text-primary mb-2">Civil Aviation Authority</h4>
-                    <p className="text-sm text-muted-foreground">Licensed air cargo handling operations</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Interactive Coverage Map */}
-      {/* <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-primary">Our Service Coverage</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Comprehensive logistics coverage across East Africa with strategic connections to global markets
-            </p>
-          </div> */}
-
-          {/* Interactive Map Container */}
-          {/* <div className="relative bg-card rounded-lg p-8 mb-12 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div> */}
-
-            {/* Map Visual */}
-            {/* <div className="relative">
-              <div className="text-center mb-8">
-                <h3 className="text-xl font-bold text-primary mb-2">East Africa Coverage Map</h3>
-                <p className="text-sm text-muted-foreground">Click on locations to view service details</p>
-              </div> */}
-
-              {/* SVG Map Representation */}
-              {/* <div className="relative mx-auto max-w-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                  alt="East Africa Map"
-                  className="w-full h-96 object-cover rounded-lg opacity-80"
-                /> */}
-
-                {/* Interactive Location Markers */}
-                {/* <div className="absolute inset-0"> */}
-                  {/* Nairobi - Main Hub */}
-                  {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="relative group cursor-pointer">
-                      <div className="w-6 h-6 bg-accent rounded-full border-4 border-white shadow-lg animate-pulse"></div>
-                      <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Nairobi - Main Hub
-                      </div>
-                    </div>
-                  </div> */}
-
-                  {/* Mombasa Port */}
-                  {/* <div className="absolute bottom-1/3 right-1/4">
-                    <div className="relative group cursor-pointer">
-                      <div className="w-5 h-5 bg-primary rounded-full border-3 border-white shadow-lg"></div>
-                      <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-accent text-accent-foreground px-2 py-1 rounded text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Mombasa Port
-                      </div>
-                    </div>
-                  </div> */}
-
-                  {/* Kampala */}
-                  {/* <div className="absolute top-2/5 left-1/3">
-                    <div className="relative group cursor-pointer">
-                      <div className="w-4 h-4 bg-accent rounded-full border-2 border-white shadow-lg"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">
-                        Kampala
-                      </div>
-                    </div>
-                  </div> */}
-
-                  {/* Dar es Salaam */}
-                  {/* <div className="absolute bottom-1/4 left-2/3">
-                    <div className="relative group cursor-pointer">
-                      <div className="w-4 h-4 bg-primary rounded-full border-2 border-white shadow-lg"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-accent text-accent-foreground px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        Dar es Salaam
-                      </div>
-                    </div>
-                  </div> */}
-
-                  {/* Kigali */}
-                  {/* <div className="absolute top-1/3 left-2/5">
-                    <div className="relative group cursor-pointer">
-                      <div className="w-4 h-4 bg-accent rounded-full border-2 border-white shadow-lg"></div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">
-                        Kigali
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-
-          {/* Coverage Statistics */}
-          {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <Card className="text-center border-2 border-accent/20">
-              <CardContent className="p-6">
-                <div className="text-3xl font-bold text-accent mb-2">5+</div>
-                <p className="text-sm font-semibold text-primary mb-1">Countries Covered</p>
-                <p className="text-xs text-muted-foreground">Kenya, Uganda, Tanzania, Rwanda, Burundi</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center border-2 border-primary/20">
-              <CardContent className="p-6">
-                <div className="text-3xl font-bold text-primary mb-2">15+</div>
-                <p className="text-sm font-semibold text-primary mb-1">Major Cities</p>
-                <p className="text-xs text-muted-foreground">Direct service to key urban centers</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center border-2 border-accent/20">
-              <CardContent className="p-6">
-                <div className="text-3xl font-bold text-accent mb-2">8</div>
-                <p className="text-sm font-semibold text-primary mb-1">Major Ports</p>
-                <p className="text-xs text-muted-foreground">Sea freight gateway access</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center border-2 border-primary/20">
-              <CardContent className="p-6">
-                <div className="text-3xl font-bold text-primary mb-2">12</div>
-                <p className="text-sm font-semibold text-primary mb-1">Airports Served</p>
-                <p className="text-xs text-muted-foreground">Air cargo handling facilities</p>
-              </CardContent>
-            </Card>
-          </div> */}
-
-          {/* Service Areas Details */}
-          {/* <div className="grid lg:grid-cols-2 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-primary flex items-center">
-                  <MapPin className="w-5 h-5 mr-2 text-accent" />
-                  Primary Service Areas
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-3 h-3 bg-accent rounded-full mt-1 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-primary">Kenya</h4>
-                    <p className="text-sm text-muted-foreground">Nairobi (HQ), Mombasa Port, Kisumu, Eldoret, Nakuru</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-3 h-3 bg-primary rounded-full mt-1 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-primary">Uganda</h4>
-                    <p className="text-sm text-muted-foreground">Kampala, Entebbe Airport, Jinja, Gulu</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-3 h-3 bg-accent rounded-full mt-1 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-primary">Tanzania</h4>
-                    <p className="text-sm text-muted-foreground">Dar es Salaam Port, Arusha, Mwanza, Dodoma</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-3 h-3 bg-primary rounded-full mt-1 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-primary">Rwanda & Burundi</h4>
-                    <p className="text-sm text-muted-foreground">Kigali, Bujumbura, cross-border logistics</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-primary flex items-center">
-                  <Globe className="w-5 h-5 mr-2 text-accent" />
-                  Global Connections
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-3 h-3 bg-accent rounded-full mt-1 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-primary">Europe</h4>
-                    <p className="text-sm text-muted-foreground">Rotterdam, Hamburg, Antwerp, Felixstowe</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-3 h-3 bg-primary rounded-full mt-1 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-primary">Asia</h4>
-                    <p className="text-sm text-muted-foreground">Dubai, Mumbai, Shanghai, Singapore</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-3 h-3 bg-accent rounded-full mt-1 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-primary">Americas</h4>
-                    <p className="text-sm text-muted-foreground">New York, Los Angeles, Miami, Santos</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-3 h-3 bg-primary rounded-full mt-1 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-primary">Middle East</h4>
-                    <p className="text-sm text-muted-foreground">Jebel Ali, Doha, Istanbul, Beirut</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div> */}
-
-          {/* Transit Times */}
-          {/* <div className="mt-12">
-            <Card className="bg-primary/5 border-2 border-primary/20">
-              <CardHeader>
-                <CardTitle className="text-primary text-center">Typical Transit Times from Nairobi</CardTitle>
-                <CardDescription className="text-center">
-                  Estimated delivery times for our most popular routes
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="flex items-center justify-center space-x-2 mb-2">
-                      <Plane className="w-4 h-4 text-accent" />
-                      <span className="font-semibold text-primary">Air Freight</span>
-                    </div>
-                    <div className="space-y-1 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Dubai</span>
-                        <span className="text-foreground">1-2 days</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Europe</span>
-                        <span className="text-foreground">2-3 days</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Asia</span>
-                        <span className="text-foreground">3-5 days</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="text-center">
-                    <div className="flex items-center justify-center space-x-2 mb-2">
-                      <Ship className="w-4 h-4 text-accent" />
-                      <span className="font-semibold text-primary">Sea Freight</span>
-                    </div>
-                    <div className="space-y-1 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Dubai</span>
-                        <span className="text-foreground">7-10 days</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Europe</span>
-                        <span className="text-foreground">18-25 days</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Asia</span>
-                        <span className="text-foreground">14-21 days</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="text-center">
-                    <div className="flex items-center justify-center space-x-2 mb-2">
-                      <Truck className="w-4 h-4 text-accent" />
-                      <span className="font-semibold text-primary">Road Transport</span>
-                    </div>
-                    <div className="space-y-1 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Kampala</span>
-                        <span className="text-foreground">2-3 days</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Dar es Salaam</span>
-                        <span className="text-foreground">3-4 days</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Kigali</span>
-                        <span className="text-foreground">2-3 days</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="text-center">
-                    <div className="flex items-center justify-center space-x-2 mb-2">
-                      <Clock className="w-4 h-4 text-accent" />
-                      <span className="font-semibold text-primary">Express Service</span>
-                    </div>
-                    <div className="space-y-1 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Regional</span>
-                        <span className="text-foreground">24-48 hrs</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">International</span>
-                        <span className="text-foreground">1-3 days</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Same Day</span>
-                        <span className="text-foreground">Available</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section> */}
-
+      {/* FAQ Section */}
   <section id="faq" className="py-20 bg-gradient-to-br from-blue-50 via-primary/10 to-accent/10 border-b-4 border-blue-300">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1812,21 +1131,17 @@ export default function AdrilinkLanding() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
-
-            {/* Contact for More Questions */}
-          
+            </div>         
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10"></div>
-        <div className="absolute inset-0 bg-grid-white/10 bg-grid-32 [mask-image:radial-gradient(white,transparent_70%)]"></div>
-        
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
+
+      {/* Contact Section */}
+  <section id="contact" className="py-20 bg-gradient-to-br from-accent/10 via-muted/30 to-primary/5 border-t-4 border-accent">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+             <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center justify-center px-4 py-1.5 mb-8 border border-accent/20 rounded-full text-sm text-accent bg-accent/10">
               <Clock className="w-4 h-4 mr-2" />
               <span>Available 24/7 for Your Logistics Needs</span>
@@ -1837,48 +1152,8 @@ export default function AdrilinkLanding() {
             <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
               Let's discuss how our logistics expertise can streamline your operations and drive your business forward.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#contact">
-                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 h-14">
-                  <Mail className="w-5 h-5 mr-2" />
-                  Contact Us Now
-                </Button>
-              </a>
-              <a href="tel:+254715328244">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 h-14"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Schedule a Call
-                </Button>
-              </a>
-              <a href="https://wa.me/254715328244" target="_blank" rel="noopener noreferrer">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-green-500 text-green-600 hover:bg-green-500 hover:text-white text-lg px-8 h-14 flex items-center"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 mr-2"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                  Contact on WhatsApp
-                </Button>
-              </a>
-            </div>
+           
           </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-  <section id="contact" className="py-20 bg-gradient-to-br from-accent/10 via-muted/30 to-primary/5 border-t-4 border-accent">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-primary">Get in Touch</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Our team is ready to assist you with any inquiries about our logistics services.
-              </p>
-            </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {/* Email Contact */}
@@ -1961,11 +1236,11 @@ export default function AdrilinkLanding() {
             {/* Company Info */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2 mb-6">
-                <div className="w-32 h-12 overflow-hidden">
+                <div className="w-12 h-12 overflow-hidden">
                   <img 
-                       src="/adrilink-logo.jpeg" alt="Adrilink Logo" 
+                       src="/adrilink-logo.png" alt="Adrilink Logo" 
                     
-                    className="w-32 h-12"
+                    className="w-12 h-12"
                   />
                 </div>
                 <div>
@@ -1976,29 +1251,7 @@ export default function AdrilinkLanding() {
               <p className="text-sm text-white/80 leading-relaxed">
                 Providing comprehensive logistics solutions across East Africa and beyond. Your trusted partner in global freight forwarding and logistics services.
               </p>
-              {/* <div className="flex items-center space-x-4">
-                <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
-                  </svg>
-                </a>
-                <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
-                  </svg>
-                </a>
-                <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
-                  </svg>
-                </a>
-                <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
-                  </svg>
-                </a>
-              </div> */}
-            </div>
+              </div>
 
             {/* Quick Links */}
             <div>
@@ -2079,6 +1332,8 @@ export default function AdrilinkLanding() {
               <p className="text-sm text-white/60">
                 &copy; {new Date().getFullYear()} Adrilink Limited. All rights reserved.
               </p>
+              <p>Powered by <a href="https://www.dimartsolutions.com/" target="_blank" rel="noopener noreferrer">DiMart Solutions</a></p>
+
               <div className="flex items-center space-x-6">
                 <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">
                   Privacy Policy
@@ -2094,6 +1349,32 @@ export default function AdrilinkLanding() {
           </div>
         </div>
       </footer>
-    </div>
+    {/* Floating WhatsApp Button */}
+    <a
+      href="https://wa.me/254715328244"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed z-50 bottom-6 right-6 md:bottom-8 md:right-8 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg flex items-center justify-center w-16 h-16 transition-all duration-300 group"
+      style={{ boxShadow: '0 4px 24px 0 rgba(39, 174, 96, 0.25)' }}
+      aria-label="Contact on WhatsApp"
+    >
+      {/* Official WhatsApp SVG */}
+      <svg className="w-8 h-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clipPath="url(#clip0_87_101)">
+          <path d="M16 2.667C8.636 2.667 2.667 8.636 2.667 16c0 2.824.824 5.45 2.24 7.654L2 30l6.56-2.16A13.28 13.28 0 0016 29.333c7.364 0 13.333-5.969 13.333-13.333S23.364 2.667 16 2.667z" fill="#25D366"/>
+          <path d="M16 27.733c-2.36 0-4.68-.68-6.68-1.96l-.48-.3-3.893 1.28 1.28-3.76-.32-.5A11.74 11.74 0 014.267 16c0-6.44 5.26-11.7 11.733-11.7 6.44 0 11.7 5.26 11.7 11.7 0 6.44-5.26 11.733-11.7 11.733zm-6.16-3.36l.68.44a10.36 10.36 0 005.48 1.6c5.72 0 10.373-4.653 10.373-10.373 0-5.72-4.653-10.373-10.373-10.373-5.72 0-10.373 4.653-10.373 10.373 0 2.16.653 4.2 1.88 5.96l.44.64-.84 2.48 2.56-.84z" fill="#fff"/>
+          <path d="M12.96 10.96c-.2-.44-.4-.44-.56-.44-.16-.01-.32-.01-.48-.01-.17 0-.44.06-.68.32-.24.26-.9.88-.9 2.14 0 1.26.92 2.48 1.04 2.66.12.18 1.8 2.88 4.36 3.92 2.16.86 2.6.69 3.08.65.48-.04 1.52-.62 1.74-1.22.22-.6.22-1.12.16-1.22-.06-.1-.24-.16-.5-.28-.26-.12-1.52-.75-1.76-.84-.24-.09-.42-.14-.6.14-.18.28-.7.84-.86 1.02-.16.18-.32.2-.58.08-.26-.12-1.1-.4-2.1-1.28-.78-.7-1.3-1.56-1.46-1.82-.16-.26-.02-.4.12-.52.12-.12.26-.32.38-.48.12-.16.16-.28.24-.46.08-.18.04-.34-.02-.48-.06-.14-.6-1.48-.84-2.04z" fill="#25D366"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_87_101">
+            <rect width="32" height="32" fill="#fff"/>
+          </clipPath>
+        </defs>
+      </svg>
+      <span className="absolute opacity-0 group-hover:opacity-100 bg-green-600 text-white text-xs rounded px-2 py-1 bottom-20 right-0 whitespace-nowrap transition-opacity duration-200 pointer-events-none">
+        Chat on WhatsApp
+      </span>
+    </a>
+  </div>
   )
 }
