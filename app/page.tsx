@@ -81,14 +81,14 @@ export default function AdrilinkLanding() {
         <div className="absolute inset-0">
           <Carousel className="h-full w-full" opts={{ loop: true }} plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}>
             <CarouselContent className="h-full">
-              {[ "/cargo.jpg", "/customs.jpg", "/sea.jpg"].map((src, idx) => (
+              {["/cargo.jpg", "/customs.jpg", "/sea.jpg"].map((src, idx) => (
                 <CarouselItem key={src} className="h-full">
                   <div className="relative h-full w-full">
                     <img
                       src={src}
                       alt={`Hero Slide ${idx + 1}`}
-                      className="object-cover w-full h-full min-h-[320px] max-h-[1200px]"
-                      style={{ minHeight: '320px', maxHeight: '1200px' }}
+                      className="object-cover w-full"
+                      style={{ height: '1200px' }}
                     />
                 
                   </div>
@@ -99,9 +99,9 @@ export default function AdrilinkLanding() {
         </div>
 
         <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance text-primary uppercase font-bold">ADRILINK LIMITED</h1>
-          <h2 className="text-4xl lg:text-4xl font-bold mb-6 text-balance text-primary uppercase font-bold">YOUR GLOBAL LOGISTICS PARTNER</h2>
-          <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-pretty text-white uppercase font-bold">
+          <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance text-red-600 uppercase font-bold">ADRILINK LIMITED</h1>
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 text-balance text-red-600 uppercase font-bold">YOUR GLOBAL LOGISTICS PARTNER</h2>
+          <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-pretty text-primary uppercase font-bold">
             WE PROVIDE TOTAL LOGISTICS SERVICES: INTERNATIONAL FREIGHT FORWARDING, CUSTOM CLEARANCE AND TRANSPORTATION TO WHEREVER YOU ARE IN EAST AFRICAN REGIONS
           </p>
 
@@ -140,20 +140,20 @@ export default function AdrilinkLanding() {
             viewport={{ once: true, amount: 0.3 }}
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary uppercase font-bold">2022</div>
-              <div className="text-sm text-primary uppercase font-bold">Established</div>
+              <div className="text-3xl font-bold text-red-600 uppercase font-bold">2022</div>
+              <div className="text-sm text-red-600 uppercase font-bold">Established</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary uppercase font-bold">100%</div>
-              <div className="text-sm text-primary uppercase font-bold">East Africa Coverage</div>
+              <div className="text-3xl font-bold text-red-600 uppercase font-bold">100%</div>
+              <div className="text-sm text-red-600 uppercase font-bold">East Africa Coverage</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary uppercase font-bold">24/7</div>
-              <div className="text-sm text-primary uppercase font-bold">Support</div>
+              <div className="text-3xl font-bold text-red-600 uppercase font-bold">24/7</div>
+              <div className="text-sm text-red-600 uppercase font-bold">Support</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary uppercase font-bold">Global</div>
-              <div className="text-sm text-primary uppercase font-bold">Network</div>
+              <div className="text-3xl font-bold text-red-600 uppercase font-bold">Global</div>
+              <div className="text-sm text-red-600 uppercase font-bold">Network</div>
             </div>
           </motion.div>
         </div>
