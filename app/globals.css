@@ -4,39 +4,39 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0); /* White */
-  --foreground: oklch(0.15 0.05 240); /* Deep Navy Blue */
-  --card: oklch(0.97 0.01 240); /* Light Gray */
-  --card-foreground: oklch(0.15 0.05 240); /* Deep Navy Blue */
-  --popover: oklch(1 0 0); /* White */
-  --popover-foreground: oklch(0.15 0.05 240); /* Deep Navy Blue */
-  --primary: oklch(0.15 0.05 240); /* Deep Navy Blue */
-  --primary-foreground: oklch(1 0 0); /* White */
-  --secondary: oklch(0.55 0.01 240); /* Gray */
-  --secondary-foreground: oklch(1 0 0); /* White */
-  --muted: oklch(0.97 0.01 240); /* Light Gray */
-  --muted-foreground: oklch(0.55 0.01 240); /* Gray */
-  --accent: oklch(0.55 0.1 240); /* Blue */
-  --accent-foreground: oklch(0.15 0.05 240); /* Deep Navy Blue */
-  --destructive: oklch(0.6 0.2 25); /* Red for errors */
-  --destructive-foreground: oklch(1 0 0); /* White */
-  --border: oklch(0.55 0.01 240); /* Gray */
-  --input: oklch(0.97 0.01 240); /* Light Gray */
-  --ring: oklch(0.55 0.1 240 / 0.5); /* Blue with transparency */
-  --chart-1: oklch(38.88% 0.24497 269.772); /* Blue */
-  --chart-2: oklch(0.15 0.05 240); /* Deep Navy Blue */
-  --chart-3: oklch(0.55 0.01 240); /* Gray */
-  --chart-4: oklch(0.97 0.01 240); /* Light Gray */
-  --chart-5: oklch(0.6 0.2 25); /* Red */
+  --background: #fff; /* White */
+  --foreground: #0000FF; /* Pure Blue */
+  --card: #e6e6ff; /* Very Light Blue */
+  --card-foreground: #0000FF; /* Pure Blue */
+  --popover: #fff; /* White */
+  --popover-foreground: #0000FF; /* Pure Blue */
+  --primary: #0000FF; /* Pure Blue */
+  --primary-foreground: #fff; /* White */
+  --secondary: #0000FF; /* Pure Blue */
+  --secondary-foreground: #fff; /* White */
+  --muted: #e6e6ff; /* Very Light Blue */
+  --muted-foreground: #0000FF; /* Pure Blue */
+  --accent: #0000FF; /* Pure Blue */
+  --accent-foreground: #fff; /* White */
+  --destructive: #0000FF; /* Pure Blue (no red) */
+  --destructive-foreground: #fff; /* White */
+  --border: #0000FF; /* Pure Blue */
+  --input: #e6e6ff; /* Very Light Blue */
+  --ring: #0000FF80; /* Pure Blue with transparency */
+  --chart-1: #0000FF; /* Pure Blue */
+  --chart-2: #0000FF; /* Pure Blue */
+  --chart-3: #0000FF; /* Pure Blue */
+  --chart-4: #e6e6ff; /* Very Light Blue */
+  --chart-5: #0000FF; /* Pure Blue */
   --radius: 0.5rem;
-  --sidebar: oklch(0.15 0.05 240); /* Deep Navy Blue */
-  --sidebar-foreground: oklch(1 0 0); /* White */
-  --sidebar-primary: oklch(0.15 0.05 240); /* Deep Navy Blue */
-  --sidebar-primary-foreground: oklch(1 0 0); /* White */
-  --sidebar-accent: oklch(0.55 0.1 240); /* Blue */
-  --sidebar-accent-foreground: oklch(0.15 0.05 240); /* Deep Navy Blue */
-  --sidebar-border: oklch(0.55 0.01 240); /* Gray */
-  --sidebar-ring: oklch(0.55 0.1 240 / 0.5); /* Blue with transparency */
+  --sidebar: #0000FF; /* Pure Blue */
+  --sidebar-foreground: #fff; /* White */
+  --sidebar-primary: #0000FF; /* Pure Blue */
+  --sidebar-primary-foreground: #fff; /* White */
+  --sidebar-accent: #0000FF; /* Pure Blue */
+  --sidebar-accent-foreground: #fff; /* White */
+  --sidebar-border: #0000FF; /* Pure Blue */
+  --sidebar-ring: #0000FF80; /* Pure Blue with transparency */
 }
 
 .dark {

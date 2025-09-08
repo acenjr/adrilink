@@ -58,15 +58,15 @@ export default function AdrilinkLanding() {
   // Animation variants for sections and images
   const sectionVariant = {
     hidden: { opacity: 0, y: 60 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeInOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.42, 0, 0.58, 1] } } // cubic-bezier for easeInOut
   }
   const imageVariant = {
     hidden: { opacity: 0, scale: 0.95 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.9, ease: "easeInOut" } }
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.9, ease: [0.42, 0, 0.58, 1] } } // cubic-bezier for easeInOut
   }
 
   return (
-    <div className="min-h-screen bg-background">
+  <div className="min-h-screen bg-background">
       {/* Animated Hero Section */}
       <motion.section
         id="home"
@@ -81,7 +81,7 @@ export default function AdrilinkLanding() {
         <div className="absolute inset-0">
           <Carousel className="h-full w-full" opts={{ loop: true }} plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}>
             <CarouselContent className="h-full">
-              {["/main.png", "/cargo.jpg", "/customs.jpg"].map((src, idx) => (
+              {[ "/cargo.jpg", "/customs.jpg", "/sea.jpg"].map((src, idx) => (
                 <CarouselItem key={src} className="h-full">
                   <div className="relative h-full w-full">
                     <img
@@ -90,7 +90,7 @@ export default function AdrilinkLanding() {
                       className="object-cover w-full h-full min-h-[320px] max-h-[1200px]"
                       style={{ minHeight: '320px', maxHeight: '1200px' }}
                     />
-                    <div className="absolute inset-0 bg-primary/60"></div>
+                
                   </div>
                 </CarouselItem>
               ))}
@@ -98,12 +98,11 @@ export default function AdrilinkLanding() {
           </Carousel>
         </div>
 
-        <div className="relative container mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance">ADRILINK LIMITED</h1>
-          <h2 className="text-4xl lg:text-4xl font-bold mb-6 text-balance">Your Global Logistics Partner</h2>
-          <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-pretty">
-            We provide total logistics services: international freight forwarding, custom clearance and transportation
-            to wherever you are in East African regions
+        <div className="relative container mx-auto px-4 text-center">
+          <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance text-primary uppercase font-bold">ADRILINK LIMITED</h1>
+          <h2 className="text-4xl lg:text-4xl font-bold mb-6 text-balance text-primary uppercase font-bold">YOUR GLOBAL LOGISTICS PARTNER</h2>
+          <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-pretty text-white uppercase font-bold">
+            WE PROVIDE TOTAL LOGISTICS SERVICES: INTERNATIONAL FREIGHT FORWARDING, CUSTOM CLEARANCE AND TRANSPORTATION TO WHEREVER YOU ARE IN EAST AFRICAN REGIONS
           </p>
 
           <motion.div
@@ -141,273 +140,26 @@ export default function AdrilinkLanding() {
             viewport={{ once: true, amount: 0.3 }}
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">2022</div>
-              <div className="text-sm">Established</div>
+              <div className="text-3xl font-bold text-primary uppercase font-bold">2022</div>
+              <div className="text-sm text-primary uppercase font-bold">Established</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">100%</div>
-              <div className="text-sm">East Africa Coverage</div>
+              <div className="text-3xl font-bold text-primary uppercase font-bold">100%</div>
+              <div className="text-sm text-primary uppercase font-bold">East Africa Coverage</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">24/7</div>
-              <div className="text-sm">Support</div>
+              <div className="text-3xl font-bold text-primary uppercase font-bold">24/7</div>
+              <div className="text-sm text-primary uppercase font-bold">Support</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">Global</div>
-              <div className="text-sm">Network</div>
+              <div className="text-3xl font-bold text-primary uppercase font-bold">Global</div>
+              <div className="text-sm text-primary uppercase font-bold">Network</div>
             </div>
           </motion.div>
         </div>
       </motion.section>
 
-      {/* Live Tracking Demo */}
-      {/* <section id="tracking" className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-primary">Track Your Shipment</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Get real-time updates on your cargo with our advanced tracking system. Enter your tracking number below
-              for instant status updates.
-            </p>
-          </div> */}
-
-          {/* Tracking Input */}
-          {/* <div className="max-w-2xl mx-auto mb-12">
-            <Card className="border-2 border-accent/20">
-              <CardHeader>
-                <CardTitle className="text-primary text-center flex items-center justify-center">
-                  <Search className="w-5 h-5 mr-2 text-accent" />
-                  Shipment Tracking
-                </CardTitle>
-                <CardDescription className="text-center">
-                  Enter your tracking number to get real-time shipment updates
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex gap-2">
-                  <Input
-                    placeholder="Enter tracking number (e.g., ADL001234)"
-                    value={trackingNumber}
-                    onChange={(e) => setTrackingNumber(e.target.value)}
-                    className="flex-1"
-                    onKeyPress={(e) => e.key === "Enter" && handleTracking()}
-                  />
-                  <Button
-                    onClick={handleTracking}
-                    disabled={isTracking || !trackingNumber.trim()}
-                    className="bg-accent text-white hover:bg-accent/90"
-                  >
-                    {isTracking ? (
-                      <div className="w-4 h-4 border-2 border-accent-foreground border-t-transparent rounded-full animate-spin" />
-                    ) : (
-                      <Search className="w-4 h-4" />
-                    )}
-                    {isTracking ? "Tracking..." : "Track"}
-                  </Button>
-                </div>
-
-                {/* Demo Tracking Numbers */}
-                {/* <div className="text-center">
-                  <p className="text-sm text-muted-foreground mb-2">Try these demo tracking numbers:</p>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {["ADL001234", "ADL005678", "ADL009876"].map((number) => (
-                      <Button
-                        key={number}
-                        variant="outline"
-                        size="sm"
-                        onClick={() => setTrackingNumber(number)}
-                        className="text-xs"
-                      >
-                        {number}
-                      </Button>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Tracking Results */}
-          {/* {trackingResult && (
-            <div className="max-w-4xl mx-auto">
-              {trackingResult.status === "Not Found" ? (
-                <Card className="border-2 border-red-200">
-                  <CardContent className="p-8 text-center">
-                    <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
-                    <h3 className="text-xl font-bold text-red-600 mb-2">Tracking Number Not Found</h3>
-                    <p className="text-muted-foreground">{trackingResult.message}</p>
-                  </CardContent>
-                </Card>
-              ) : (
-                <div className="space-y-6">
-                  {/* Shipment Overview */}
-                  {/* <Card className="border-2 border-primary/20">
-                    <CardHeader>
-                      <div className="flex items-center justify-between">
-                        <CardTitle className="text-primary">Shipment Details</CardTitle>
-                        <Badge className={`${trackingResult.statusColor} text-white`}>{trackingResult.status}</Badge>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div>
-                          <h4 className="font-semibold text-primary mb-1">Tracking Number</h4>
-                          <p className="text-muted-foreground font-mono">{trackingNumber}</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-primary mb-1">Service Type</h4>
-                          <p className="text-muted-foreground">{trackingResult.service}</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-primary mb-1">Origin</h4>
-                          <p className="text-muted-foreground">{trackingResult.origin}</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-primary mb-1">Destination</h4>
-                          <p className="text-muted-foreground">{trackingResult.destination}</p>
-                        </div>
-                      </div>
-
-                      {/* Progress Bar */}
-                      {/* <div className="mt-6">
-                        <div className="flex items-center justify-between mb-2">
-                          <h4 className="font-semibold text-primary">Delivery Progress</h4>
-                          <span className="text-sm text-muted-foreground">{trackingResult.progress}%</span>
-                        </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <div
-                            className="bg-accent h-2 rounded-full transition-all duration-1000 ease-out text-white"
-                            style={{ width: `${trackingResult.progress}%` }}
-                          ></div>
-                        </div>
-                        <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                          <span>Origin</span>
-                          <span>In Transit</span>
-                          <span>Destination</span>
-                        </div>
-                      </div>
-
-                      <div className="mt-6 grid md:grid-cols-2 gap-4">
-                        <div>
-                          <h4 className="font-semibold text-primary mb-1">Current Location</h4>
-                          <p className="text-muted-foreground">{trackingResult.currentLocation}</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-primary mb-1">Estimated Delivery</h4>
-                          <p className="text-muted-foreground">{trackingResult.estimatedDelivery}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  {/* Tracking Timeline */}
-                  {/* <Card>
-                    <CardHeader>
-                      <CardTitle className="text-primary">Shipment Timeline</CardTitle>
-                      <CardDescription>Detailed tracking history and status updates</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-4">
-                        {trackingResult.events.map((event, index) => {
-                          const IconComponent = event.icon
-                          return (
-                            <div key={index} className="flex items-start space-x-4">
-                              <div className="flex-shrink-0">
-                                <div className="w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center">
-                                  <IconComponent className="w-5 h-5 text-accent-foreground" />
-                                </div>
-                              </div>
-                              <div className="flex-1 min-w-0">
-                                <div className="flex items-center justify-between">
-                                  <h4 className="font-semibold text-primary">{event.status}</h4>
-                                  <span className="text-sm text-muted-foreground">{event.date}</span>
-                                </div>
-                                <p className="text-sm text-muted-foreground">{event.location}</p>
-                              </div>
-                            </div>
-                          )
-                        })}
-                      </div>
-                    </CardContent>
-                  </Card> */}
-
-                  {/* Additional Services */}
-                  {/* <div className="grid md:grid-cols-3 gap-6">
-                    <Card className="text-center">
-                      <CardContent className="p-6">
-                        <Mail className="w-8 h-8 text-accent mx-auto mb-3" />
-                        <h3 className="font-semibold text-primary mb-2">Email Notifications</h3>
-                        <p className="text-sm text-muted-foreground mb-3">Get automatic updates sent to your email</p>
-                        <Button variant="outline" size="sm">
-                          Subscribe
-                        </Button>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="text-center">
-                      <CardContent className="p-6">
-                        <Phone className="w-8 h-8 text-accent mx-auto mb-3" />
-                        <h3 className="font-semibold text-primary mb-2">SMS Alerts</h3>
-                        <p className="text-sm text-muted-foreground mb-3">Receive status updates via SMS</p>
-                        <Button variant="outline" size="sm">
-                          Enable SMS
-                        </Button>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="text-center">
-                      <CardContent className="p-6">
-                        <FileCheck className="w-8 h-8 text-accent mx-auto mb-3" />
-                        <h3 className="font-semibold text-primary mb-2">Documents</h3>
-                        <p className="text-sm text-muted-foreground mb-3">Download shipping documents</p>
-                        <Button variant="outline" size="sm">
-                          View Docs
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Tracking Features */}
-          {/* {!trackingResult && (
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <Card className="text-center border-2 border-accent/20">
-                <CardContent className="p-6">
-                  <Navigation className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <h3 className="font-semibold text-primary mb-2">Real-Time Updates</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Track your shipment's journey with live location updates and status changes
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center border-2 border-primary/20">
-                <CardContent className="p-6">
-                  <Clock className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-semibold text-primary mb-2">Delivery Estimates</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Get accurate delivery time estimates based on current transit progress
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center border-2 border-accent/20">
-                <CardContent className="p-6">
-                  <AlertCircle className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <h3 className="font-semibold text-primary mb-2">Instant Alerts</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Receive immediate notifications for any delays or status changes
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          )}
-        </div>
-      </section> */}
-
+      
       {/* About Section */}
   <section id="about" className="py-20 bg-gradient-to-br from-blue-50 via-muted/30 to-primary/10 border-b-4 border-blue-300">
         <div className="container mx-auto px-4">

@@ -37,7 +37,7 @@ function Header() {
           <div className="container mx-auto px-6 flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-2">
               <img src="/adrilink-logo.png" alt="Adrilink Logo" className="h-18 w-18" />
-              <span className="font-bold text-4xl text-primary">Adrilink Limited</span>
+              <span className="font-bold text-4xl text-white">Adrilink Limited</span>
    
             </Link>
             <nav className="hidden md:flex gap-8">
@@ -64,7 +64,7 @@ function Header() {
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2">
                     <img src="/adrilink-logo.png" alt="Adrilink Logo" className="h-18 w-18" />
-                <span className="font-bold text-lg text-primary">Adrilink Limited</span>
+                <span className="font-bold text-lg text-white">Adrilink Limited</span>
               </div>
               <button className="p-2 rounded-full bg-accent/20 hover:bg-accent/40 text-accent" onClick={() => setOpen(false)}>
                 <X className="w-7 h-7" />
