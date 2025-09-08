@@ -5,38 +5,38 @@
 
 :root {
   --background: #fff; /* White */
-  --foreground: #0000FF; /* Pure Blue */
+  --foreground: #0073E7; /* Strong Blue */
   --card: #e6e6ff; /* Very Light Blue */
-  --card-foreground: #0000FF; /* Pure Blue */
+  --card-foreground: #0073E7; /* Strong Blue */
   --popover: #fff; /* White */
-  --popover-foreground: #0000FF; /* Pure Blue */
-  --primary: #0000FF; /* Pure Blue */
+  --popover-foreground: #0073E7; /* Strong Blue */
+  --primary: #0073E7; /* Strong Blue */
   --primary-foreground: #fff; /* White */
-  --secondary: #0000FF; /* Pure Blue */
+  --secondary: #0073E7; /* Strong Blue */
   --secondary-foreground: #fff; /* White */
   --muted: #e6e6ff; /* Very Light Blue */
-  --muted-foreground: #0000FF; /* Pure Blue */
-  --accent: #0000FF; /* Pure Blue */
+  --muted-foreground: #0073E7; /* Strong Blue */
+  --accent: #0073E7; /* Strong Blue */
   --accent-foreground: #fff; /* White */
-  --destructive: #0000FF; /* Pure Blue (no red) */
+  --destructive: #0073E7; /* Strong Blue (no red) */
   --destructive-foreground: #fff; /* White */
-  --border: #0000FF; /* Pure Blue */
+  --border: #0073E7; /* Strong Blue */
   --input: #e6e6ff; /* Very Light Blue */
-  --ring: #0000FF80; /* Pure Blue with transparency */
-  --chart-1: #0000FF; /* Pure Blue */
-  --chart-2: #0000FF; /* Pure Blue */
-  --chart-3: #0000FF; /* Pure Blue */
+  --ring: #0073E780; /* Strong Blue with transparency */
+  --chart-1: #0073E7; /* Strong Blue */
+  --chart-2: #0073E7; /* Strong Blue */
+  --chart-3: #0073E7; /* Strong Blue */
   --chart-4: #e6e6ff; /* Very Light Blue */
-  --chart-5: #0000FF; /* Pure Blue */
+  --chart-5: #0073E7; /* Strong Blue */
   --radius: 0.5rem;
-  --sidebar: #0000FF; /* Pure Blue */
+  --sidebar: #0073E7; /* Strong Blue */
   --sidebar-foreground: #fff; /* White */
-  --sidebar-primary: #0000FF; /* Pure Blue */
+  --sidebar-primary: #0073E7; /* Strong Blue */
   --sidebar-primary-foreground: #fff; /* White */
-  --sidebar-accent: #0000FF; /* Pure Blue */
+  --sidebar-accent: #0073E7; /* Strong Blue */
   --sidebar-accent-foreground: #fff; /* White */
-  --sidebar-border: #0000FF; /* Pure Blue */
-  --sidebar-ring: #0000FF80; /* Pure Blue with transparency */
+  --sidebar-border: #0073E7; /* Strong Blue */
+  --sidebar-ring: #0073E780; /* Strong Blue with transparency */
 }
 
 .dark {

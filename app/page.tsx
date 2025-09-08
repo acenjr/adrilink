@@ -99,8 +99,12 @@ export default function AdrilinkLanding() {
         </div>
 
         <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance text-primary uppercase font-bold">ADRILINK LIMITED</h1>
-          <h2 className="text-2xl md:text-4xl font-bold mb-6 text-balance text-primary uppercase font-bold">YOUR GLOBAL LOGISTICS PARTNER</h2>
+          {/* <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance text-primary uppercase font-bold">ADRILINK LIMITED</h1> */}
+          <br />
+          <br />
+         
+        
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 text-balance text-white uppercase font-bold">YOUR GLOBAL LOGISTICS PARTNER</h2>
           {/* <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-pretty text-primary uppercase font-bold">
             WE PROVIDE TOTAL LOGISTICS SERVICES: INTERNATIONAL FREIGHT FORWARDING, CUSTOM CLEARANCE AND TRANSPORTATION TO WHEREVER YOU ARE IN EAST AFRICAN REGIONS
           </p> */}
@@ -108,6 +112,9 @@ export default function AdrilinkLanding() {
           <br />
           <br />
           <br />
+        
+         
+         
 
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -128,15 +135,14 @@ export default function AdrilinkLanding() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-accent text-primary hover:bg-white hover:text-primary text-lg px-8 bg-transparent"
+                  className="border-accent text-black hover:bg-white hover:text-black text-lg px-8 bg-transparent"
                 >
                   Get Quote
                 </Button>
               </a>
             </motion.div>
           </motion.div>
-   <br />
-   <br />
+
           <br />
           <br />
           <br />
@@ -148,22 +154,24 @@ export default function AdrilinkLanding() {
             viewport={{ once: true, amount: 0.3 }}
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-red-600 uppercase font-bold">2022</div>
-              <div className="text-sm text-red-600 uppercase font-bold">Established</div>
+              <div className="text-3xl font-bold text-white uppercase font-bold">2022</div>
+              <div className="text-sm text-white uppercase font-bold">Established</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-red-600 uppercase font-bold">100%</div>
-              <div className="text-sm text-red-600 uppercase font-bold">East Africa Coverage</div>
+              <div className="text-3xl font-bold text-white uppercase font-bold">100%</div>
+              <div className="text-sm text-white uppercase font-bold">East Africa Coverage</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-red-600 uppercase font-bold">24/7</div>
-              <div className="text-sm text-red-600 uppercase font-bold">Support</div>
+              <div className="text-3xl font-bold text-white uppercase font-bold">24/7</div>
+              <div className="text-sm text-white uppercase font-bold">Support</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-red-600 uppercase font-bold">Global</div>
-              <div className="text-sm text-red-600 uppercase font-bold">Network</div>
+              <div className="text-3xl font-bold text-white uppercase font-bold">Global</div>
+              <div className="text-sm text-white uppercase font-bold">Network</div>
             </div>
           </motion.div>
+          <br />
+          <br />
         </div>
       </motion.section>
 
@@ -172,12 +180,12 @@ export default function AdrilinkLanding() {
   <section id="about" className="py-20 bg-gradient-to-br from-blue-50 via-muted/30 to-primary/10 border-b-4 border-blue-300">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-primary">About Adrilink Limited</h2>
-            <p className="text-lg text-muted-foreground mb-8 text-pretty">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-black">About Adrilink Limited</h2>
+            <p className="text-lg text-black mb-8 text-pretty">
               Adrilink Limited is a logistics company based in Kenya, incorporated on October 12, 2022, with head office
               in Nairobi.
             </p>
-            <p className="text-lg text-muted-foreground text-pretty">
+            <p className="text-lg text-black text-pretty">
               We weave excellent logistics services into a global network with multi-modal transportation capabilities,
               an unrivalled distribution system and superior information technology that provides total logistics
               solutions.
@@ -197,8 +205,8 @@ export default function AdrilinkLanding() {
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold text-primary mb-2">Established Excellence</h3>
-                  <p className="text-muted-foreground">
+                  <h3 className="font-semibold text-black mb-2">Established Excellence</h3>
+                  <p className="text-black">
                     Founded in 2022 with a vision to revolutionize logistics in East Africa
                   </p>
                 </div>
@@ -206,15 +214,15 @@ export default function AdrilinkLanding() {
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold text-primary mb-2">Strategic Location</h3>
-                  <p className="text-muted-foreground">Based in Nairobi, Kenya - the gateway to East African markets</p>
+                  <h3 className="font-semibold text-black mb-2">Strategic Location</h3>
+                  <p className="text-black">Based in Nairobi, Kenya - the gateway to East African markets</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold text-primary mb-2">Global Network</h3>
-                  <p className="text-muted-foreground">
+                  <h3 className="font-semibold text-black mb-2">Global Network</h3>
+                  <p className="text-black">
                     Worldwide partnerships ensuring seamless international logistics
                   </p>
                 </div>
@@ -236,17 +244,17 @@ export default function AdrilinkLanding() {
                   </div>
                   <div className="absolute -inset-2 bg-primary/5 text-white rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <CardTitle className="text-2xl text-primary">Our Mission</CardTitle>
+                <CardTitle className="text-2xl text-black">Our Mission</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-center text-muted-foreground text-pretty">
+                <p className="text-center text-black text-pretty">
                   To design, build and deliver flexible, integrated, best in class and cost effective logistics
                   solutions.
                 </p>
                 <div className="mt-6 pt-6 border-t border-primary/10">
                   <div className="flex items-center justify-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-primary" />
-                    <span className="text-sm text-muted-foreground">Excellence in Every Delivery</span>
+                    <span className="text-sm text-black">Excellence in Every Delivery</span>
                   </div>
                 </div>
               </CardContent>
@@ -260,16 +268,16 @@ export default function AdrilinkLanding() {
                   </div>
                   <div className="absolute -inset-2 bg-accent/5 text-white rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <CardTitle className="text-2xl text-primary">Our Vision</CardTitle>
+                <CardTitle className="text-2xl text-black">Our Vision</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-center text-muted-foreground text-pretty">
+                <p className="text-center text-black text-pretty">
                   To be recognized as the expert in logistic services with top-notch Customer Service.
                 </p>
                 <div className="mt-6 pt-6 border-t border-accent/10">
                   <div className="flex items-center justify-center space-x-2">
                     <Star className="w-4 h-4 text-accent" />
-                    <span className="text-sm text-muted-foreground">Setting Industry Standards</span>
+                    <span className="text-sm text-black">Setting Industry Standards</span>
                   </div>
                 </div>
               </CardContent>
@@ -282,8 +290,8 @@ export default function AdrilinkLanding() {
   <section id="services" className="py-20 bg-gradient-to-br from-primary/5 via-muted/30 to-accent/10 border-b-4 border-primary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-primary">Comprehensive Logistics Solutions</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-black">Comprehensive Logistics Solutions</h2>
+            <p className="text-lg text-black max-w-2xl mx-auto text-pretty">
               From air and sea freight to customs clearance and door-to-door delivery, we provide end-to-end logistics
               services across East Africa and beyond.
             </p>
@@ -301,15 +309,15 @@ export default function AdrilinkLanding() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
                 <div className="absolute bottom-0 left-0 p-8">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 bg-blue-400 text-white rounded-lg flex items-center justify-center">
-                      <Plane className="w-6 h-6 text-blue-900" />
+                    <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#0073E7' }}>
+                      <Plane className="w-6 h-6" style={{ color: '#fff' }} />
                     </div>
                     <h3 className="text-2xl font-bold text-white">Air Freight</h3>
                   </div>
                   <p className="text-white/90 mb-4 max-w-md">
                     International air cargo solutions offering the fastest and most cost-effective transport through our global network.
                   </p>
-                  <Button variant="outline" className="bg-blue-400 border-blue-400 text-white hover:bg-blue-500 hover:text-white" onClick={() => setServicePopup("air")}>Read More</Button>
+                  <Button variant="outline" className="text-white" style={{ backgroundColor: '#0073E7', borderColor: '#0073E7' }} onClick={() => setServicePopup("air")}>Read More</Button>
                 </div>
               </div>
             </div>
@@ -324,15 +332,15 @@ export default function AdrilinkLanding() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
                 <div className="absolute bottom-0 left-0 p-8">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 bg-blue-300 text-white rounded-lg flex items-center justify-center">
-                      <Ship className="w-6 h-6 text-blue-900" />
+                    <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#0073E7' }}>
+                      <Ship className="w-6 h-6" style={{ color: '#fff' }} />
                     </div>
                     <h3 className="text-2xl font-bold text-white">Sea Freight</h3>
                   </div>
                   <p className="text-white/90 mb-4 max-w-md">
                     FCL and LCL services with comprehensive tracking and daily updates for complete shipment visibility.
                   </p>
-                  <Button variant="outline" className="bg-blue-300 border-blue-300 text-white hover:bg-blue-400 hover:text-white" onClick={() => setServicePopup("sea")}>Read More</Button>
+                  <Button variant="outline" className="text-white" style={{ backgroundColor: '#0073E7', borderColor: '#0073E7' }} onClick={() => setServicePopup("sea")}>Read More</Button>
                 </div>
               </div>
             </div>
@@ -349,15 +357,15 @@ export default function AdrilinkLanding() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-blue-200 text-white rounded-lg flex items-center justify-center">
-                      <Package className="w-5 h-5 text-blue-900" />
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#0073E7' }}>
+                      <Package className="w-5 h-5" style={{ color: '#fff' }} />
                     </div>
                     <h3 className="text-xl font-bold text-white">Consolidation</h3>
                   </div>
                   <p className="text-white/90 text-sm mb-4">
                     Cost-effective groupage services for multiple origins and destinations.
                   </p>
-                  <Button variant="outline" className="bg-blue-200 border-blue-200 text-white hover:bg-blue-300 hover:text-white" onClick={() => setServicePopup("consolidation")}>Read More</Button>
+                  <Button variant="outline" className="text-white" style={{ backgroundColor: '#0073E7', borderColor: '#0073E7' }} onClick={() => setServicePopup("consolidation")}>Read More</Button>
                 </div>
               </div>
             </div>
@@ -372,15 +380,15 @@ export default function AdrilinkLanding() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-blue-100 text-white rounded-lg flex items-center justify-center">
-                      <FileCheck className="w-5 h-5 text-blue-900" />
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#0073E7' }}>
+                      <FileCheck className="w-5 h-5" style={{ color: '#fff' }} />
                     </div>
                     <h3 className="text-xl font-bold text-white">Customs Clearance</h3>
                   </div>
                   <p className="text-white/90 text-sm mb-4">
                     Expert customs brokerage with Africa-wide coverage and compliance.
                   </p>
-                  <Button variant="outline" className="bg-blue-100 border-blue-100 text-blue-900 hover:bg-blue-200 hover:text-white" onClick={() => setServicePopup("customs")}>Read More</Button>
+                  <Button variant="outline" className="text-white" style={{ backgroundColor: '#0073E7', borderColor: '#0073E7' }} onClick={() => setServicePopup("customs")}>Read More</Button>
                 </div>
               </div>
             </div>
@@ -395,15 +403,15 @@ export default function AdrilinkLanding() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
-                      <Warehouse className="w-5 h-5 text-blue-900" />
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#0073E7' }}>
+                      <Warehouse className="w-5 h-5" style={{ color: '#fff' }} />
                     </div>
                     <h3 className="text-xl font-bold text-white">Warehousing</h3>
                   </div>
                   <p className="text-white/90 text-sm mb-4">
                     Strategic storage and distribution solutions with inventory control.
                   </p>
-                  <Button variant="outline" className="bg-blue-50 border-blue-50 text-blue-900 hover:bg-blue-100 hover:text-white" onClick={() => setServicePopup("warehousing")}>Read More</Button>
+                  <Button variant="outline" className="text-white" style={{ backgroundColor: '#0073E7', borderColor: '#0073E7' }} onClick={() => setServicePopup("warehousing")}>Read More</Button>
                 </div>
               </div>
             </div>
@@ -418,15 +426,15 @@ export default function AdrilinkLanding() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center">
-                      <Truck className="w-5 h-5 text-blue-900" />
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#0073E7' }}>
+                      <Truck className="w-5 h-5" style={{ color: '#fff' }} />
                     </div>
                     <h3 className="text-xl font-bold text-white">Door to Door</h3>
                   </div>
                   <p className="text-white/90 text-sm mb-4">
                     Complete supply chain control with comprehensive coverage.
                   </p>
-                  <Button variant="outline" className="bg-blue-400 border-blue-400 text-blue-900 hover:bg-blue-500 hover:text-white" onClick={() => setServicePopup("door")}>Read More</Button>
+                  <Button variant="outline" className="text-white" style={{ backgroundColor: '#0073E7', borderColor: '#0073E7' }} onClick={() => setServicePopup("door")}>Read More</Button>
                 </div>
               </div>
             </div>
@@ -443,15 +451,15 @@ export default function AdrilinkLanding() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
                 <div className="absolute bottom-0 left-0 p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-blue-200 rounded-lg flex items-center justify-center">
-                      <Home className="w-5 h-5 text-blue-900" />
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#0073E7' }}>
+                      <Home className="w-5 h-5" style={{ color: '#fff' }} />
                     </div>
                     <h3 className="text-xl font-bold text-white">Packing Services</h3>
                   </div>
                   <p className="text-white/90 text-sm mb-4">
                     Professional packing for local and international moves.
                   </p>
-                  <Button variant="outline" className="bg-blue-200 border-blue-200 text-blue-900 hover:bg-blue-300 hover:text-white" onClick={() => setServicePopup("packing")}>Read More</Button>
+                  <Button variant="outline" className="text-white" style={{ backgroundColor: '#0073E7', borderColor: '#0073E7' }} onClick={() => setServicePopup("packing")}>Read More</Button>
                 </div>
               </div>
             </div>
@@ -460,30 +468,32 @@ export default function AdrilinkLanding() {
       {servicePopup === "air" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-400 via-blue-200 to-blue-100 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto rounded-xl shadow-2xl p-8 relative"
+            style={{ background: 'linear-gradient(135deg, #0073E7 0%, #4FC3F7 100%)' }}
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">Airfreight Import and Export</h3>
-            <p className="mb-2 text-blue-900 font-semibold">Main Description</p>
-            <p className="mb-4 text-blue-900">In conjunction with our worldwide network of Partners, Associates and Branch offices, we can arrange Air import and export from any country to any destination.</p>
-            <p className="mb-2 text-blue-900 font-semibold">Service Details</p>
-            <p className="mb-4 text-blue-900">We offer a comprehensive range of international air cargo solutions ensuring your air cargo travels the safest, fastest and most cost-effective way possible.</p>
-            <p className="mb-2 text-blue-900 font-semibold">Expertise</p>
-            <p className="mb-4 text-blue-900">Our experience in the provision of airfreight, air charters, and aviation support and management services covers the complete range of fixed wing operations. In addition to traditional airfreight services, We provide freight handling services and liaison services with local civil aviation.</p>
+            <button className="absolute top-4 right-4 text-black hover:text-gray-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold mb-4 text-black">Airfreight Import and Export</h3>
+            <p className="mb-2 font-semibold text-black">Main Description</p>
+            <p className="mb-4 text-black">In conjunction with our worldwide network of Partners, Associates and Branch offices, we can arrange Air import and export from any country to any destination.</p>
+            <p className="mb-2 font-semibold text-black">Service Details</p>
+            <p className="mb-4 text-black">We offer a comprehensive range of international air cargo solutions ensuring your air cargo travels the safest, fastest and most cost-effective way possible.</p>
+            <p className="mb-2 font-semibold text-black">Expertise</p>
+            <p className="mb-4 text-black">Our experience in the provision of airfreight, air charters, and aviation support and management services covers the complete range of fixed wing operations. In addition to traditional airfreight services, We provide freight handling services and liaison services with local civil aviation.</p>
           </div>
         </div>
       )}
       {servicePopup === "sea" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-300 via-blue-100 to-blue-50 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto rounded-xl shadow-2xl p-8 relative"
+            style={{ background: 'linear-gradient(135deg, #0073E7 0%, #B3E5FC 100%)' }}
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">Sea freight Import & Export</h3>
-            <p className="mb-2 text-blue-900 font-semibold">Service Overview</p>
-            <ul className="mb-4 text-blue-900 list-disc pl-5">
+            <button className="absolute top-4 right-4 text-black hover:text-gray-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold mb-4 text-black">Sea freight Import & Export</h3>
+            <p className="mb-2 font-semibold text-black">Service Overview</p>
+            <ul className="mb-4 list-disc pl-5 text-black">
               <li>FCL and LCL import and export</li>
               <li>Issuance and verification of shipping documentation</li>
               <li>Export and import customs clearance</li>
@@ -497,31 +507,32 @@ export default function AdrilinkLanding() {
               <li>Sea/Air transportation</li>
               <li>Sea/Road and Sea/Rail Intermodal</li>
             </ul>
-            <p className="mb-2 text-blue-900 font-semibold">Comprehensive Services</p>
-            <p className="mb-4 text-blue-900">We offer comprehensive sea freight services via a worldwide network for FCL & LCL shipments, break bulk, project logistics and oversized.</p>
-            <p className="mb-2 text-blue-900 font-semibold">Equipment & Capabilities</p>
-            <p className="mb-4 text-blue-900">Whether it is in containers, special equipment or hazardous cargo, we are equipped with the tools, knowledge and a shipping line network able to handle all type of load.</p>
-            <p className="mb-2 text-blue-900 font-semibold">Tracking & Delivery</p>
-            <p className="mb-4 text-blue-900">An integrated tracking service will provide you with Custom-tailored daily email reports. From Port handling services to customs clearance, storage and forwarding, we will ensure your cargo is delivered and handled in a safe and timely manner.</p>
-            <p className="mb-2 text-blue-900 font-semibold">Service Options</p>
-            <p className="mb-4 text-blue-900">The choice of service includes conference, non-conference lines and charter vessels.</p>
+            <p className="mb-2 font-semibold text-black">Comprehensive Services</p>
+            <p className="mb-4 text-black">We offer comprehensive sea freight services via a worldwide network for FCL & LCL shipments, break bulk, project logistics and oversized.</p>
+            <p className="mb-2 font-semibold text-black">Equipment & Capabilities</p>
+            <p className="mb-4 text-black">Whether it is in containers, special equipment or hazardous cargo, we are equipped with the tools, knowledge and a shipping line network able to handle all type of load.</p>
+            <p className="mb-2 font-semibold text-black">Tracking & Delivery</p>
+            <p className="mb-4 text-black">An integrated tracking service will provide you with Custom-tailored daily email reports. From Port handling services to customs clearance, storage and forwarding, we will ensure your cargo is delivered and handled in a safe and timely manner.</p>
+            <p className="mb-2 font-semibold text-black">Service Options</p>
+            <p className="mb-4 text-black">The choice of service includes conference, non-conference lines and charter vessels.</p>
           </div>
         </div>
       )}
       {servicePopup === "packing" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-200 via-blue-100 to-blue-50 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto rounded-xl shadow-2xl p-8 relative"
+            style={{ background: 'linear-gradient(135deg, #0073E7 0%, #E1F5FE 100%)' }}
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">Packing & Removals</h3>
-            <p className="mb-2 text-blue-900 font-semibold">Team Expertise</p>
-            <p className="mb-4 text-blue-900">Adrilink Ltd has qualified team dealing specifically in both local and international packing and removals. We offer a door-to-door solution for both import and export personal effects via our worldwide network.</p>
-            <p className="mb-2 text-blue-900 font-semibold">Special Care</p>
-            <p className="mb-4 text-blue-900">Personal effects are normally very fragile and need attention to detail and careful handling.</p>
-            <p className="mb-2 text-blue-900 font-semibold">Our Procedures</p>
-            <ul className="mb-4 text-blue-900 list-disc pl-5">
+            <button className="absolute top-4 right-4 text-black hover:text-gray-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold mb-4 text-black">Packing & Removals</h3>
+            <p className="mb-2 font-semibold text-black">Team Expertise</p>
+            <p className="mb-4 text-black">Adrilink Ltd has qualified team dealing specifically in both local and international packing and removals. We offer a door-to-door solution for both import and export personal effects via our worldwide network.</p>
+            <p className="mb-2 font-semibold text-black">Special Care</p>
+            <p className="mb-4 text-black">Personal effects are normally very fragile and need attention to detail and careful handling.</p>
+            <p className="mb-2 font-semibold text-black">Our Procedures</p>
+            <ul className="mb-4 list-disc pl-5 text-black">
               <li>A survey of the personal effects</li>
               <li>Professional packing</li>
               <li>Collection of shipment and storage in a closed warehouse awaiting freight</li>
@@ -537,67 +548,72 @@ export default function AdrilinkLanding() {
       {servicePopup === "consolidation" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-100 via-blue-200 to-blue-50 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto rounded-xl shadow-2xl p-8 relative"
+            style={{ background: 'linear-gradient(135deg, #0073E7 0%, #B3E5FC 100%)' }}
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">Airfreight & Sea freight Consolidation</h3>
-            <p className="mb-2 text-blue-900 font-semibold">Service Description</p>
-            <p className="mb-4 text-blue-900">We also offer consolidation or groupage services from most origins and selected destinations for both airfreight and sea freight.</p>
+            <button className="absolute top-4 right-4 text-black hover:text-gray-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold mb-4 text-black">Airfreight & Sea freight Consolidation</h3>
+            <p className="mb-2 font-semibold text-black">Service Description</p>
+            <p className="mb-4 text-black">We also offer consolidation or groupage services from most origins and selected destinations for both airfreight and sea freight.</p>
           </div>
         </div>
       )}
       {servicePopup === "warehousing" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto rounded-xl shadow-2xl p-8 relative"
+            style={{ background: 'linear-gradient(135deg, #0073E7 0%, #E1F5FE 100%)' }}
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">Logistics & Warehousing</h3>
-            <p className="mb-2 text-blue-900 font-semibold">Service Listing</p>
-            <p className="mb-4 text-blue-900">This service is mentioned in the services list but detailed content is not provided in the PDF source document.</p>
+            <button className="absolute top-4 right-4 text-black hover:text-gray-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold mb-4 text-black">Logistics & Warehousing</h3>
+            <p className="mb-2 font-semibold text-black">Service Listing</p>
+            <p className="mb-4 text-black">This service is mentioned in the services list but detailed content is not provided in the PDF source document.</p>
           </div>
         </div>
       )}
       {servicePopup === "customs" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto rounded-xl shadow-2xl p-8 relative"
+            style={{ background: 'linear-gradient(135deg, #0073E7 0%, #B3E5FC 100%)' }}
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">Customs Clearance Services</h3>
-            <p className="mb-2 text-blue-900 font-semibold">Quality Service</p>
-            <p className="mb-4 text-blue-900">We continue to provide quality customs broker and clearance services to our clients all over Africa. Strict compliance to proper customs clearance and procedures are vital.</p>
+            <button className="absolute top-4 right-4 text-black hover:text-gray-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold mb-4 text-black">Customs Clearance Services</h3>
+            <p className="mb-2 font-semibold text-black">Quality Service</p>
+            <p className="mb-4 text-black">We continue to provide quality customs broker and clearance services to our clients all over Africa. Strict compliance to proper customs clearance and procedures are vital.</p>
           </div>
         </div>
       )}
       {servicePopup === "door" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-400 via-blue-200 to-blue-100 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto rounded-xl shadow-2xl p-8 relative"
+            style={{ background: 'linear-gradient(135deg, #0073E7 0%, #4FC3F7 100%)' }}
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">Door to Door</h3>
-            <p className="mb-2 text-blue-900 font-semibold">Competitive Advantage</p>
-            <p className="mb-4 text-blue-900">We deliver competitive advantage to each of our client's supply chains by offering a wide range of global integrated logistics to a customer base that stretches to the most remote locations of East & Central Africa.</p>
-            <p className="mb-2 text-blue-900 font-semibold">Efficient Integration</p>
-            <p className="mb-4 text-blue-900">Our efficient integration of logistics services means that we control the entire supply chain and cut out unnecessary mark-ups and intermediaries. Our clients get exceptional value in a simplified price-per-ton delivered-to-the-door format.</p>
+            <button className="absolute top-4 right-4 text-black hover:text-gray-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold mb-4 text-black">Door to Door</h3>
+            <p className="mb-2 font-semibold text-black">Competitive Advantage</p>
+            <p className="mb-4 text-black">We deliver competitive advantage to each of our client's supply chains by offering a wide range of global integrated logistics to a customer base that stretches to the most remote locations of East & Central Africa.</p>
+            <p className="mb-2 font-semibold text-black">Efficient Integration</p>
+            <p className="mb-4 text-black">Our efficient integration of logistics services means that we control the entire supply chain and cut out unnecessary mark-ups and intermediaries. Our clients get exceptional value in a simplified price-per-ton delivered-to-the-door format.</p>
           </div>
         </div>
       )}
       {servicePopup === "container" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setServicePopup(null)}>
           <div
-            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto bg-gradient-to-br from-blue-300 via-blue-100 to-blue-50 rounded-xl shadow-2xl p-8 relative"
+            className="max-w-lg w-full max-h-[90vh] sm:max-h-[600px] overflow-y-auto rounded-xl shadow-2xl p-8 relative"
+            style={{ background: 'linear-gradient(135deg, #0073E7 0%, #B3E5FC 100%)' }}
             onClick={e => e.stopPropagation()}
           >
-            <button className="absolute top-4 right-4 text-blue-900 hover:text-blue-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">Container Services</h3>
-            <p className="mb-2 text-blue-900 font-semibold">Specialized Equipment</p>
-            <p className="mb-4 text-blue-900">Whether you are shipping vaccines or perishable items, our containers are equipped to provide advanced transport you can rely on.</p>
+            <button className="absolute top-4 right-4 text-black hover:text-gray-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
+            <h3 className="text-2xl font-bold mb-4 text-black">Container Services</h3>
+            <p className="mb-2 font-semibold text-black">Specialized Equipment</p>
+            <p className="mb-4 text-black">Whether you are shipping vaccines or perishable items, our containers are equipped to provide advanced transport you can rely on.</p>
           </div>
         </div>
       )}
@@ -608,8 +624,8 @@ export default function AdrilinkLanding() {
   <section id="why-choose-us" className="py-20 bg-gradient-to-br from-primary/10 via-muted/20 to-accent/10 border-b-4 border-primary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-primary">Why Choose Adrilink Limited</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-black">Why Choose Adrilink Limited</h2>
+            <p className="text-lg text-black max-w-2xl mx-auto text-pretty">
               We combine competitive rates with quality service and local expertise to deliver exceptional logistics
               solutions.
             </p>
@@ -620,8 +636,8 @@ export default function AdrilinkLanding() {
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-accent-foreground" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Competitive Rates</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold text-black mb-3">Competitive Rates</h3>
+              <p className="black">
                 Our offices offer competitive rates on all our services without compromising quality.
               </p>
             </div>
@@ -630,8 +646,8 @@ export default function AdrilinkLanding() {
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-8 h-8 text-accent-foreground" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Quality Service</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold text-black mb-3">Quality Service</h3>
+              <p className="text-black">
                 We look forward to offering you our quality service with attention to detail.
               </p>
             </div>
@@ -640,8 +656,8 @@ export default function AdrilinkLanding() {
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-accent-foreground" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Global Network</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold text-black mb-3">Global Network</h3>
+              <p className="text-black">
                 Worldwide partners and associates ensure seamless international operations.
               </p>
             </div>
@@ -650,8 +666,8 @@ export default function AdrilinkLanding() {
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-accent-foreground" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Local Expertise</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold text-black mb-3">Local Expertise</h3>
+              <p className="text-black">
                 Deep understanding of East African market dynamics and regulations.
               </p>
             </div>
@@ -660,16 +676,16 @@ export default function AdrilinkLanding() {
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-accent-foreground" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Complete Solutions</h3>
-              <p className="text-muted-foreground">End-to-end logistics management from origin to final destination.</p>
+              <h3 className="text-xl font-semibold text-black mb-3">Complete Solutions</h3>
+              <p className="text-black">End-to-end logistics management from origin to final destination.</p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-accent-foreground" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Reliable Timing</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold text-black mb-3">Reliable Timing</h3>
+              <p className="text-black">
                 Consistent delivery schedules and real-time tracking for peace of mind.
               </p>
             </div>
@@ -677,7 +693,7 @@ export default function AdrilinkLanding() {
 
           <div className="text-center mt-12">
             <a href="#contact">
-              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8">
+              <Button size="lg" className="bg-accent text-black hover:bg-accent/90 text-lg px-8">
                 Get Your Quote Today
               </Button>
             </a>
@@ -689,8 +705,8 @@ export default function AdrilinkLanding() {
   <section id="faq" className="py-20 bg-gradient-to-br from-blue-50 via-primary/10 to-accent/10 border-b-4 border-blue-300">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-primary">Frequently Asked Questions</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-black">Frequently Asked Questions</h2>
+            <p className="text-lg text-black max-w-2xl mx-auto text-pretty">
               Get answers to common questions about our logistics services, shipping processes, and customs procedures.
             </p>
           </div>
@@ -701,15 +717,15 @@ export default function AdrilinkLanding() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-2 mb-6">
                   <HelpCircle className="w-5 h-5 text-accent" />
-                  <h3 className="text-xl font-semibold text-primary">General Services</h3>
+                  <h3 className="text-xl font-semibold text-black">General Services</h3>
                 </div>
 
                 <Collapsible>
                   <CollapsibleTrigger className="flex items-center justify-between w-full p-4 text-left bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
-                    <span className="font-medium text-primary">What logistics services do you offer?</span>
-                    <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                    <span className="font-medium text-black">What logistics services do you offer?</span>
+                    <ChevronDown className="w-4 h-4 text-black" />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="p-4 text-muted-foreground text-sm">
+                  <CollapsibleContent className="p-4 text-black text-sm">
                     We provide comprehensive logistics solutions including air freight import/export, sea freight (FCL &
                     LCL), customs clearance, door-to-door delivery, warehousing, consolidation services, packing &
                     removals, and temperature-controlled container services across East Africa and globally.
@@ -718,10 +734,10 @@ export default function AdrilinkLanding() {
 
                 <Collapsible>
                   <CollapsibleTrigger className="flex items-center justify-between w-full p-4 text-left bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
-                    <span className="font-medium text-primary">Which countries do you serve?</span>
-                    <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                    <span className="font-medium text-black">Which countries do you serve?</span>
+                    <ChevronDown className="w-4 h-4 text-black" />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="p-4 text-muted-foreground text-sm">
+                  <CollapsibleContent className="p-4 text-black text-sm">
                     Our primary coverage includes Kenya, Uganda, Tanzania, Rwanda, and Burundi. We also provide
                     international services to Europe, Asia, Americas, and Middle East through our global network of
                     partners and agents.
@@ -730,10 +746,10 @@ export default function AdrilinkLanding() {
 
                 <Collapsible>
                   <CollapsibleTrigger className="flex items-center justify-between w-full p-4 text-left bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
-                    <span className="font-medium text-primary">How do I get a shipping quote?</span>
-                    <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                    <span className="font-medium text-black">How do I get a shipping quote?</span>
+                    <ChevronDown className="w-4 h-4 text-black" />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="p-4 text-muted-foreground text-sm">
+                  <CollapsibleContent className="p-4 text-black text-sm">
                     You can request a quote by contacting us via email at danslauscbukhala@gmail.com, calling our
                     office, or filling out our contact form. Please provide details about your cargo (weight,
                     dimensions, origin, destination, and preferred service type) for an accurate quote.
@@ -742,10 +758,10 @@ export default function AdrilinkLanding() {
 
                 <Collapsible>
                   <CollapsibleTrigger className="flex items-center justify-between w-full p-4 text-left bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
-                    <span className="font-medium text-primary">Do you handle dangerous goods?</span>
-                    <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                    <span className="font-medium text-black">Do you handle dangerous goods?</span>
+                    <ChevronDown className="w-4 h-4 text-black" />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="p-4 text-muted-foreground text-sm">
+                  <CollapsibleContent className="p-4 text-black text-sm">
                     Yes, we are certified to handle dangerous goods (DG) shipments by both air and sea. Our team is
                     trained in IATA and IMDG regulations. Please inform us about dangerous goods during booking so we
                     can ensure proper documentation and handling procedures.
@@ -754,10 +770,10 @@ export default function AdrilinkLanding() {
 
                 <Collapsible>
                   <CollapsibleTrigger className="flex items-center justify-between w-full p-4 text-left bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
-                    <span className="font-medium text-primary">What are your business hours?</span>
-                    <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                    <span className="font-medium text-black">What are your business hours?</span>
+                    <ChevronDown className="w-4 h-4 text-black" />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="p-4 text-muted-foreground text-sm">
+                  <CollapsibleContent className="p-4 text-black text-sm">
                     Our office hours are Monday to Friday: 8:00 AM - 6:00 PM, Saturday: 9:00 AM - 2:00 PM. We're closed
                     on Sundays. However, we provide 24/7 support for urgent shipments and tracking inquiries through our
                     emergency contact line.
@@ -769,15 +785,15 @@ export default function AdrilinkLanding() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-2 mb-6">
                   <FileCheck className="w-5 h-5 text-accent" />
-                  <h3 className="text-xl font-semibold text-primary">Shipping & Customs</h3>
+                  <h3 className="text-xl font-semibold text-black">Shipping & Customs</h3>
                 </div>
 
                 <Collapsible>
                   <CollapsibleTrigger className="flex items-center justify-between w-full p-4 text-left bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
-                    <span className="font-medium text-primary">How long does customs clearance take?</span>
-                    <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                    <span className="font-medium text-black">How long does customs clearance take?</span>
+                    <ChevronDown className="w-4 h-4 text-black" />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="p-4 text-muted-foreground text-sm">
+                  <CollapsibleContent className="p-4 text-black text-sm">
                     Customs clearance typically takes 1-3 business days for standard shipments with complete
                     documentation. Complex shipments or those requiring additional inspections may take longer. Our
                     customs team works closely with authorities to expedite the process and keep you informed of any
@@ -787,12 +803,12 @@ export default function AdrilinkLanding() {
 
                 <Collapsible>
                   <CollapsibleTrigger className="flex items-center justify-between w-full p-4 text-left bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
-                    <span className="font-medium text-primary">
+                    <span className="font-medium text-black">
                       What documents do I need for international shipping?
                     </span>
-                    <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                    <ChevronDown className="w-4 h-4 text-black" />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="p-4 text-muted-foreground text-sm">
+                  <CollapsibleContent className="p-4 text-black text-sm">
                     Required documents typically include: Commercial Invoice, Packing List, Bill of Lading/Airway Bill,
                     Certificate of Origin, and any specific permits or licenses. For imports, you'll also need an Import
                     Declaration Form (IDF). Our team will guide you through the specific requirements for your shipment.
@@ -801,10 +817,10 @@ export default function AdrilinkLanding() {
 
                 <Collapsible>
                   <CollapsibleTrigger className="flex items-center justify-between w-full p-4 text-left bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
-                    <span className="font-medium text-primary">How can I track my shipment?</span>
-                    <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                    <span className="font-medium text-black">How can I track my shipment?</span>
+                    <ChevronDown className="w-4 h-4 text-black" />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="p-4 text-muted-foreground text-sm">
+                  <CollapsibleContent className="p-4 text-black text-sm">
                     We provide real-time tracking through our integrated system. You'll receive a tracking number upon
                     shipment booking and regular email updates on your cargo's status. You can also contact our customer
                     service team for immediate status updates and estimated delivery times.
@@ -813,10 +829,10 @@ export default function AdrilinkLanding() {
 
                 <Collapsible>
                   <CollapsibleTrigger className="flex items-center justify-between w-full p-4 text-left bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
-                    <span className="font-medium text-primary">What are the typical transit times?</span>
-                    <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                    <span className="font-medium text-black">What are the typical transit times?</span>
+                    <ChevronDown className="w-4 h-4 text-black" />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="p-4 text-muted-foreground text-sm">
+                  <CollapsibleContent className="p-4 text-black text-sm">
                     Transit times vary by service: Air freight to Dubai (1-2 days), Europe (2-3 days), Asia (3-5 days).
                     Sea freight to Dubai (7-10 days), Europe (18-25 days), Asia (14-21 days). Regional road transport:
                     Kampala (2-3 days), Dar es Salaam (3-4 days). Express services available for urgent shipments.
@@ -825,10 +841,10 @@ export default function AdrilinkLanding() {
 
                 <Collapsible>
                   <CollapsibleTrigger className="flex items-center justify-between w-full p-4 text-left bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
-                    <span className="font-medium text-primary">Do you provide cargo insurance?</span>
-                    <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                    <span className="font-medium text-black">Do you provide cargo insurance?</span>
+                    <ChevronDown className="w-4 h-4 text-black" />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="p-4 text-muted-foreground text-sm">
+                  <CollapsibleContent className="p-4 text-black text-sm">
                     Yes, we offer comprehensive cargo insurance through our trusted insurance partners. Coverage options
                     include All Risk, Total Loss Only, and specific coverage for high-value or sensitive goods.
                     Insurance rates typically range from 0.1% to 0.5% of cargo value depending on the type of goods and
@@ -842,24 +858,24 @@ export default function AdrilinkLanding() {
             <div className="mt-12 grid md:grid-cols-2 gap-8">
               <Card className="border-2 border-accent/20">
                 <CardHeader>
-                  <CardTitle className="text-primary flex items-center">
+                  <CardTitle className="text-black flex items-center">
                     <Thermometer className="w-5 h-5 mr-2 text-accent" />
                     Temperature-Controlled Shipping
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-3">
+                <CardContent className="space-y-3 text-black">
                   <div>
-                    <h4 className="font-semibold text-primary text-sm mb-1">
+                    <h4 className="font-semibold text-black text-sm mb-1">
                       What temperature ranges can you maintain?
                     </h4>
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-xs text-black">
                       We handle frozen (-18°C to -25°C), chilled (2°C to 8°C), and controlled ambient (15°C to 25°C)
                       shipments with continuous temperature monitoring and alerts.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary text-sm mb-1">Do you handle pharmaceutical shipments?</h4>
-                    <p className="text-xs text-muted-foreground">
+                    <h4 className="font-semibold text-black text-sm mb-1">Do you handle pharmaceutical shipments?</h4>
+                    <p className="text-xs text-black">
                       Yes, we're GDP certified for pharmaceutical logistics with validated cold chain procedures,
                       temperature mapping, and compliance with international pharmaceutical shipping standards.
                     </p>
@@ -869,22 +885,22 @@ export default function AdrilinkLanding() {
 
               <Card className="border-2 border-primary/20">
                 <CardHeader>
-                  <CardTitle className="text-primary flex items-center">
+                  <CardTitle className="text-black flex items-center">
                     <Package className="w-5 h-5 mr-2 text-accent" />
                     Packaging & Special Handling
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-3">
+                <CardContent className="space-y-3 text-black">
                   <div>
-                    <h4 className="font-semibold text-primary text-sm mb-1">Do you provide packing services?</h4>
-                    <p className="text-xs text-muted-foreground">
+                    <h4 className="font-semibold text-black text-sm mb-1">Do you provide packing services?</h4>
+                    <p className="text-xs text-black">
                       Yes, we offer professional packing services including export crating, fragile item protection, and
                       specialized packaging for electronics, artwork, and machinery.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary text-sm mb-1">Can you handle oversized cargo?</h4>
-                    <p className="text-xs text-muted-foreground">
+                    <h4 className="font-semibold text-black text-sm mb-1">Can you handle oversized cargo?</h4>
+                    <p className="text-xs text-black">
                       We specialize in project cargo and oversized shipments including machinery, vehicles, and
                       construction equipment with route surveys and special handling equipment.
                     </p>
@@ -902,14 +918,14 @@ export default function AdrilinkLanding() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
              <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center px-4 py-1.5 mb-8 border border-accent/20 rounded-full text-sm text-accent bg-accent/10">
-              <Clock className="w-4 h-4 mr-2" />
-              <span>Available 24/7 for Your Logistics Needs</span>
+            <div className="inline-flex items-center justify-center px-4 py-1.5 mb-8 border border-accent/20 rounded-full text-sm text-black bg-accent/10">
+              <Clock className="w-4 h-4 mr-2 text-black" />
+              <span className="text-black">Available 24/7 for Your Logistics Needs</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-black">
               Ready to Transform Your Supply Chain?
             </h2>
-            <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
+            <p className="text-lg text-black mb-10 max-w-2xl mx-auto">
               Let's discuss how our logistics expertise can streamline your operations and drive your business forward.
             </p>
            
@@ -925,11 +941,11 @@ export default function AdrilinkLanding() {
                       <Mail className="w-6 h-6 text-accent" />
                     </div>
                   </div>
-                  <h3 className="font-semibold text-lg text-primary mb-2">Email Us</h3>
-                  <a href="mailto:danslauscbukhala@gmail.com" className="text-muted-foreground hover:text-accent transition-colors">
-                    danslauscbukhala@gmail.com
+                  <h3 className="font-semibold text-lg text-black mb-2">Email Us</h3>
+                  <a href="mailto:info@adrilink.com" className="text-black hover:text-accent transition-colors">
+                    info@adrilink.com
                   </a>
-                  <p className="text-sm text-muted-foreground mt-2">
+                  <p className="text-sm text-black mt-2">
                     24/7 response time
                   </p>
                 </div>
@@ -944,11 +960,15 @@ export default function AdrilinkLanding() {
                       <Phone className="w-6 h-6 text-primary" />
                     </div>
                   </div>
-                  <h3 className="font-semibold text-lg text-primary mb-2">Call Us</h3>
-                  <a href="tel:+254715328244" className="text-muted-foreground hover:text-primary transition-colors">
+                  <h3 className="font-semibold text-lg text-black mb-2">Call Us</h3>
+                  <a href="tel:+254715328244" className="text-black hover:text-primary transition-colors">
                     +254 715 328 244
                   </a>
-                  <p className="text-sm text-muted-foreground mt-2">
+                  <br />
+                  <a href="tel:+254732528658" className="text-black hover:text-primary transition-colors">
+                    0732 528 658
+                  </a>
+                  <p className="text-sm text-black mt-2">
                     Mon-Sat: 8am - 6pm
                   </p>
                 </div>
@@ -963,24 +983,36 @@ export default function AdrilinkLanding() {
                       <MapPin className="w-6 h-6 text-accent" />
                     </div>
                   </div>
-                  <h3 className="font-semibold text-lg text-primary mb-2">Visit Us</h3>
-                  <p className="text-muted-foreground">
-                    Nairobi, Kenya
+                  <h3 className="font-semibold text-lg text-black mb-2">Visit Us</h3>
+                  <p className="text-black">
+                    Access Building, 3rd Floor, CBD, Opposite Supreme Court, Nairobi, Kenya
                   </p>
-                  <p className="text-sm text-muted-foreground mt-2">
+                  <p className="text-sm text-black mt-2">
                     Main Office Location
                   </p>
+                  <div className="mt-4 rounded-lg overflow-hidden border border-accent/20">
+                    <iframe
+                      title="Adrilink Office Location"
+                      src="https://www.google.com/maps?q=Access+Building,+Nairobi,+Kenya&output=embed"
+                      width="100%"
+                      height="180"
+                      style={{ border: 0 }}
+                      allowFullScreen={true}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Additional Contact Info */}
             <div className="mt-16 text-center">
-              <div className="inline-flex items-center justify-center px-4 py-1.5 border border-accent/20 rounded-full text-sm text-accent bg-accent/10">
-                <Clock className="w-4 h-4 mr-2" />
-                <span>Quick Response Guaranteed</span>
+              <div className="inline-flex items-center justify-center px-4 py-1.5 border border-accent/20 rounded-full text-sm text-black bg-accent/10">
+                <Clock className="w-4 h-4 mr-2 text-black" />
+                <span className="text-black">Quick Response Guaranteed</span>
               </div>
-              <p className="mt-4 text-muted-foreground">
+              <p className="mt-4 text-black">
                 For urgent inquiries, our team is available 24/7 to assist you.
               </p>
             </div>
@@ -1026,9 +1058,7 @@ export default function AdrilinkLanding() {
                 <li>
                   <a href="#services" className="text-sm text-white/80 hover:text-white transition-colors">Our Services</a>
                 </li>
-                <li>
-                  <a href="#testimonials" className="text-sm text-white/80 hover:text-white transition-colors">Testimonials</a>
-                </li>
+               
                 <li>
                   <a href="#contact" className="text-sm text-white/80 hover:text-white transition-colors">Contact</a>
                 </li>
@@ -1063,12 +1093,12 @@ export default function AdrilinkLanding() {
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-accent mt-0.5" />
-                  <span className="text-sm text-white/80">Nairobi, Kenya</span>
+                  <span className="text-sm text-white/80">Access Building, 3rd Floor, CBD, Opposite Supreme Court, Nairobi, Kenya</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-accent" />
-                  <a href="mailto:danslauscbukhala@gmail.com" className="text-sm text-white/80 hover:text-white transition-colors">
-                    danslauscbukhala@gmail.com
+                  <a href="mailto:info@adrilink.com" className="text-sm text-white/80 hover:text-white transition-colors">
+                    info@adrilink.com
                   </a>
                 </li>
                 <li className="flex items-center space-x-3">
@@ -1077,10 +1107,11 @@ export default function AdrilinkLanding() {
                     +254 715 328 244
                   </a>
                 </li>
-                <li>
-                  {/* <Button variant="outline" className="mt-4 bg-transparent border-white text-white hover:bg-white hover:text-primary w-full">
-                    Get Quote
-                  </Button> */}
+                <li className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-accent" />
+                  <a href="tel:+254732528658" className="text-sm text-white/80 hover:text-white transition-colors">
+                    0732 528 658
+                  </a>
                 </li>
               </ul>
             </div>
@@ -1094,17 +1125,7 @@ export default function AdrilinkLanding() {
               </p>
               <p>Powered by <a href="https://www.dimartsolutions.com/" target="_blank" rel="noopener noreferrer">DiMart Solutions</a></p>
 
-              <div className="flex items-center space-x-6">
-                <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">
-                  Privacy Policy
-                </a>
-                <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">
-                  Terms of Service
-                </a>
-                <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">
-                  Cookie Policy
-                </a>
-              </div>
+              
             </div>
           </div>
         </div>
