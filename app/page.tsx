@@ -99,11 +99,11 @@ export default function AdrilinkLanding() {
         </div>
 
         <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance text-red-600 uppercase font-bold">ADRILINK LIMITED</h1>
-          <h2 className="text-2xl md:text-4xl font-bold mb-6 text-balance text-red-600 uppercase font-bold">YOUR GLOBAL LOGISTICS PARTNER</h2>
-          <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-pretty text-primary uppercase font-bold">
+          <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance text-primary uppercase font-bold">ADRILINK LIMITED</h1>
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 text-balance text-primary uppercase font-bold">YOUR GLOBAL LOGISTICS PARTNER</h2>
+          {/* <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-pretty text-primary uppercase font-bold">
             WE PROVIDE TOTAL LOGISTICS SERVICES: INTERNATIONAL FREIGHT FORWARDING, CUSTOM CLEARANCE AND TRANSPORTATION TO WHEREVER YOU ARE IN EAST AFRICAN REGIONS
-          </p>
+          </p> */}
 
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
