@@ -104,6 +104,10 @@ export default function AdrilinkLanding() {
           {/* <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-pretty text-primary uppercase font-bold">
             WE PROVIDE TOTAL LOGISTICS SERVICES: INTERNATIONAL FREIGHT FORWARDING, CUSTOM CLEARANCE AND TRANSPORTATION TO WHEREVER YOU ARE IN EAST AFRICAN REGIONS
           </p> */}
+     
+          <br />
+          <br />
+          <br />
 
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -124,14 +128,18 @@ export default function AdrilinkLanding() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-accent text-white hover:bg-white hover:text-primary text-lg px-8 bg-transparent"
+                  className="border-accent text-primary hover:bg-white hover:text-primary text-lg px-8 bg-transparent"
                 >
                   Get Quote
                 </Button>
               </a>
             </motion.div>
           </motion.div>
-
+   <br />
+   <br />
+          <br />
+          <br />
+          <br />
           <motion.div
             className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto"
             initial="hidden"
