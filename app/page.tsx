@@ -569,7 +569,7 @@ export default function AdrilinkLanding() {
             <button className="absolute top-4 right-4 text-black hover:text-gray-700 text-xl" onClick={() => setServicePopup(null)}>&times;</button>
             <h3 className="text-2xl font-bold mb-4 text-black">Logistics & Warehousing</h3>
             <p className="mb-2 font-semibold text-black">Service Listing</p>
-            <p className="mb-4 text-black">This service is mentioned in the services list but detailed content is not provided in the PDF source document.</p>
+            <p className="mb-4 text-black">Our strategically located warehousing facilities are designed to optimize storage and streamline delivery across East Africa, ensuring efficiency, reliability, and seamless support for businesses of all sizes.</p>
           </div>
         </div>
       )}
@@ -637,7 +637,7 @@ export default function AdrilinkLanding() {
                 <Shield className="w-8 h-8 text-accent-foreground" />
               </div>
               <h3 className="text-xl font-semibold text-black mb-3">Competitive Rates</h3>
-              <p className="black">
+              <p className="text-black">
                 Our offices offer competitive rates on all our services without compromising quality.
               </p>
             </div>
@@ -966,7 +966,7 @@ export default function AdrilinkLanding() {
                   </a>
                   <br />
                   <a href="tel:+254732528658" className="text-black hover:text-primary transition-colors">
-                    0732 528 658
+                    +254 732 528 658
                   </a>
                   <p className="text-sm text-black mt-2">
                     Mon-Sat: 8am - 6pm
@@ -1110,7 +1110,7 @@ export default function AdrilinkLanding() {
                 <li className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-accent" />
                   <a href="tel:+254732528658" className="text-sm text-white/80 hover:text-white transition-colors">
-                    0732 528 658
+                    +254 732 528 658
                   </a>
                 </li>
               </ul>
