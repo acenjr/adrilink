@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: "#services", label: "Services" },
 
   { href: "#contact", label: "Contact" },
+  { href: "/insights", label: "Insights" },
 ]
 
 function Header() {
@@ -39,7 +40,7 @@ function Header() {
           <div className="container mx-auto px-6 flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-2">
               <img src="/logo.png" alt="Adrilink Logo" className="h-18 w-18" />
-              <span className={`font-bold text-2xl md:text-4xl ${scrolled ? "text-black" : "text-white"}`}>Adrilink Limited</span>
+              {/* <span className={`font-bold text-2xl md:text-4xl ${scrolled ? "text-black" : "text-white"}`}>Adrilink Limited</span> */}
             </Link>
             <nav className="hidden md:flex gap-8">
               {NAV_LINKS.map(link => (

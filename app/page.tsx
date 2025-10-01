@@ -1500,12 +1500,12 @@ export default function AdrilinkLanding() {
                     className="w-12 h-12"
                   />
                 </div>
-                <div>
+                {/* <div>
                   <h3 className="font-bold text-white">Adrilink Limited</h3>
                   <p className="text-xs text-white/80">
                     Your Global Logistics Partner
                   </p>
-                </div>
+                </div> */}
               </div>
               <p className="text-sm text-white/80 leading-relaxed">
                 Providing comprehensive logistics solutions across East Africa
